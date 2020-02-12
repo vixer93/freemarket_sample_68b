@@ -43,7 +43,7 @@
 ### Association
 - has_many :product_images
 - has_one  :contract_history
-- belongs_to :small_category
+- belongs_to :category
 - belongs_to :ship_from
 - belongs_to :user
 
@@ -117,3 +117,7 @@
 |------|----|-------|
 |name|String|null: false|
 |ancestry|String|null: false|
+
+### Association
+- has_ancestry :product
+
