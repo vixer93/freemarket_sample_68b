@@ -2,7 +2,8 @@
 
 ## ER Diagram
 
-![freemarket_sample_68b (3)](https://user-images.githubusercontent.com/59346949/74318084-e6883580-4dbf-11ea-9b32-e2581b593492.png)
+![freemarket_sample_68b (1)](https://user-images.githubusercontent.com/58249300/74335932-9ff70300-4de0-11ea-9829-85890e87775a.png)
+
 
 
 ## userテーブル
@@ -119,5 +120,5 @@
 |ancestry|String|null: false|
 
 ### Association
-- has_ancestry 
+- has_ancestry :product
 
