@@ -14,8 +14,8 @@
 |password_conform|String|null: false|
 |first_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |last_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
-|first_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
-|last_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+|first_name_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+|last_name_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 
 ### Association
 - has_many :products
@@ -119,5 +119,5 @@
 |ancestry|String|null: false|
 
 ### Association
-- has_ancestry :product
+- has_ancestry 
 
