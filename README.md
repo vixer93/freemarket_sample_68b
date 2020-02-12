@@ -37,8 +37,8 @@
 |send_price|Integer|null: false(enum)|
 |ship_day|Integer|null: false（enum）|
 |user_id|Integer|null: false, foreign_key: true|
-|small_category_id|Integer|null: false,foreign_key: true|
 |ship_from_id|Integer|null: false,foreign_key: true|
+|category_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - has_many :product_images
@@ -79,8 +79,8 @@
 ## ship_fromテーブル
 |Column|Type|Options|
 |------|----|-------|
-|products_id|Integer|null: false|
-|name|String|null: false|
+|product_id|Integer|null: false|
+|name|String|null: false|null: false｜
 
 ### Association
 - has_many :products
@@ -103,7 +103,7 @@
 ## product_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|products_id|Integer|foreign_key: true|
+|product_id|Integer|foreign_key: true|
 |name|String|null: false|
 
 ### Association
@@ -111,32 +111,9 @@
 
 
 
-## small_categoryテーブル
-|Column|Type|Options|
-|------|----|-------|
-|middle_category_id|Integer|null: false,foreign_key: true|
 
-### Association
-- has_many :products
-- belongs_to :middle_category
-
-
-
-## middle_categoryテーブル
-|Column|Type|Options|
-|------|----|-------|
-|big_category_id|Integer|null: false,foreign_key: true|
-
-### Association
-- has_many :small_categories
-- belongs_to :big_category
-
-
-
-## big_categoryテーブル
+## categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|String|null: false|
-
-### Association
-- has_many :middle_categories
+|ancestry|String|null: false|
