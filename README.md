@@ -5,29 +5,11 @@
 ![freemarket_sample_68b (3)](https://user-images.githubusercontent.com/59346949/74318084-e6883580-4dbf-11ea-9b32-e2581b593492.png)
 
 
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-
-
 ## userテーブル
 |Column|Type|Options|
+|------|----|-------|
 |nickname|string|null: false|
-|email|string|null: false,uniqueness:{case_sensitive: false},
-  format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}|
+|email|string|null: false,uniqueness:{case_sensitive: false},format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}|
 |password|String|null: false, length: {minimum: 7}|
 |password_conform|String|null: false|
 |first_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
@@ -45,6 +27,7 @@
 
 ## products
 |Column|Type|Options|
+|------|----|-------|
 |name|String|null: false|
 |description|Text|null: false|
 |price|Integer|null: false|
@@ -67,6 +50,7 @@
 
 ## address
 |Column|Type|Options|
+|------|----|-------|
 |user_id|Integer|null:false,foreign_key: true|
 |postal_code|String|null: false, format: {with:/\A\d{3}[_]\d{4}\z/}|
 |prefectures|String|null: faise|
@@ -81,6 +65,7 @@
 
 ## pay_jp
 |Column|Type|Options|
+|------|----|-------|
 |user_id|Integer|null: false,foreign_key: true|
 |customer_id|String|null: false|
 |card_id|String|null: false|
@@ -92,6 +77,7 @@
 
 ## ship_from
 |Column|Type|Options|
+|------|----|-------|
 |products_id|Integer|null: false|
 |name|String|null: false|
 
@@ -102,6 +88,7 @@
 
 ## contract_history
 |Column|Type|Options|
+|------|----|-------|
 |product_id|Integer|null: false,foreign_key:true|
 |user_id|Integer|null: false,foreign_key: true|
 
@@ -113,6 +100,7 @@
 
 ## product_images
 |Column|Type|Options|
+|------|----|-------|
 |products_id|Integer|foreign_key: true|
 |name|String|null: false|
 
@@ -123,6 +111,7 @@
 
 ## small_category
 |Column|Type|Options|
+|------|----|-------|
 |middle_category_id|Integer|null: false,foreign_key: true|
 
 ### Association
@@ -133,6 +122,7 @@
 
 ## middle_category
 |Column|Type|Options|
+|------|----|-------|
 |big_category_id|Integer|null: false,foreign_key: true|
 
 ### Association
@@ -143,6 +133,7 @@
 
 ## big_category
 |Column|Type|Options|
+|------|----|-------|
 |name|String|null: false|
 
 ### Association
