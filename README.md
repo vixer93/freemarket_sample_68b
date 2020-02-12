@@ -87,6 +87,7 @@
 
 
 
+
 ## contract_historyテーブル
 |Column|Type|Options|
 |------|----|-------|
