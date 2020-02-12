@@ -25,7 +25,7 @@
 
 
 
-## products
+## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|String|null: false|
@@ -48,7 +48,7 @@
 
 
 
-## address
+## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|Integer|null:false,foreign_key: true|
@@ -63,7 +63,7 @@
 
 
 
-## pay_jp
+## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|Integer|null: false,foreign_key: true|
@@ -75,7 +75,7 @@
 
 
 
-## ship_from
+## ship_fromテーブル
 |Column|Type|Options|
 |------|----|-------|
 |products_id|Integer|null: false|
@@ -86,7 +86,7 @@
 
 
 
-## contract_history
+## contract_historyテーブル
 |Column|Type|Options|
 |------|----|-------|
 |product_id|Integer|null: false,foreign_key:true|
@@ -98,7 +98,7 @@
 
 
 
-## product_images
+## product_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |products_id|Integer|foreign_key: true|
@@ -109,7 +109,7 @@
 
 
 
-## small_category
+## small_categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |middle_category_id|Integer|null: false,foreign_key: true|
@@ -120,7 +120,7 @@
 
 
 
-## middle_category
+## middle_categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |big_category_id|Integer|null: false,foreign_key: true|
@@ -131,7 +131,7 @@
 
 
 
-## big_category
+## big_categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|String|null: false|
