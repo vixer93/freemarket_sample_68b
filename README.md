@@ -2,7 +2,7 @@
 
 ## ER Diagram
 
-![freemarket_sample_68b (3)](https://user-images.githubusercontent.com/59346949/74318084-e6883580-4dbf-11ea-9b32-e2581b593492.png)
+![freemarket_sample_68b](https://user-images.githubusercontent.com/58249300/74335110-c7e56700-4dde-11ea-82be-6d897fe91c5c.png)
 
 
 ## userテーブル
