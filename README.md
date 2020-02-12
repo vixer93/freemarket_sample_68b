@@ -18,8 +18,8 @@
 |last_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 
 ### Association
-- has_many :products,contract_history
-- has_many :users, through:  :users_groups
+- has_many :products
+- has_many :contract_history
 - has_one  :address
 - has_one  :cards
 
@@ -37,14 +37,15 @@
 |send_price|Integer|null: false(enum)|
 |ship_day|Integer|null: false（enum）|
 |user_id|Integer|null: false, foreign_key: true|
-|small_category|Integer|null: false,foreign_key: true|
+|small_category_id|Integer|null: false,foreign_key: true|
 |ship_from_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - has_many :product_images
 - has_one  :contract_history
-- belongs_to :small_category,ship_from
-- belongs_to :users
+- belongs_to :small_category
+- belongs_to :ship_from
+- belongs_to :user
 
 
 
@@ -59,7 +60,7 @@
 |apartment_name|String|
 
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 
 
@@ -71,7 +72,7 @@
 |card_id|String|null: false|
 
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 
 
@@ -82,7 +83,7 @@
 |name|String|null: false|
 
 ### Association
-- belongs_to :products
+- has_many :product
 
 
 
@@ -93,8 +94,8 @@
 |user_id|Integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :products
-- belongs_to :users
+- belongs_to :product
+- belongs_to :user
 
 
 
@@ -105,7 +106,7 @@
 |name|String|null: false|
 
 ### Association
-- belongs_to :products
+- belongs_to :product
 
 
 
