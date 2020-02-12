@@ -19,9 +19,9 @@
 
 ### Association
 - has_many :products
-- has_many :contract_history
+- has_many :contract_histories
 - has_one  :address
-- has_one  :cards
+- has_one  :card
 
 
 
@@ -83,7 +83,7 @@
 |name|String|null: false|
 
 ### Association
-- has_many :product
+- has_many :products
 
 
 
@@ -127,7 +127,7 @@
 |big_category_id|Integer|null: false,foreign_key: true|
 
 ### Association
-- has_many :small_category
+- has_many :small_categories
 - belongs_to :big_category
 
 
@@ -138,4 +138,4 @@
 |name|String|null: false|
 
 ### Association
-- has_many :middle_category
+- has_many :middle_categories
