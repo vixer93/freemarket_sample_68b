@@ -15,8 +15,8 @@
 |password_conform|String|null: false|
 |first_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |last_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
-|first_name_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
-|last_name_ruby|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+|first_name_|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+|last_name_kana|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 
 ### Association
 - has_many :products
@@ -80,7 +80,6 @@
 ## ship_fromテーブル
 |Column|Type|Options|
 |------|----|-------|
-|product_id|Integer|null: false|
 |name|String|null: false|null: false｜
 
 ### Association
