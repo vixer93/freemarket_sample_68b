@@ -21,7 +21,7 @@
 - has_many :products,contract_history
 - has_many :users, through:  :users_groups
 - has_one  :address
-- has_one  :pay_jp
+- has_one  :cards
 
 
 
