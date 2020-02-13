@@ -23,7 +23,7 @@
 
 ### Association
 - has_many :products,dependent:delete_all
-- has_many :contract_histories,dependent:delete
+- has_many :contract_histories,dependent:delete_all
 - has_one  :address,dependent:delete
 - has_one  :card,dependent:delete
 
@@ -45,9 +45,9 @@
 |category_id|Integer|null: false,foreign_key: true|
 
 ### Association
-- has_many :product_images,:dependent:delete
-- has_one  :contract_history
-- belongs_to :category
+- has_many :product_images,dependent:delete_all
+- has_one  :contract_history,dependent:delete
+- belongs_to :category　
 - belongs_to :ship_from
 - belongs_to :user
 
@@ -64,7 +64,7 @@
 |apartment_name|String|
 
 ### Association
-- belongs_to :user,dependent:delete
+- belongs_to :user
 
 
 
@@ -76,7 +76,7 @@
 |card_id|String|null: false|
 
 ### Association
-- belongs_to :user,dependent:delete
+- belongs_to :user
 
 
 
