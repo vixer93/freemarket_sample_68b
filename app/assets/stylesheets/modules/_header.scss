@@ -1,0 +1,52 @@
+.header {
+  padding: 0 60px;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  &__box {
+    height: 100%;
+    min-height: 82px;
+    width: 100%;
+    max-width: 1040px;
+    &__main {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      &--icon {
+        background-image: url(logo.png);
+        height: 40px;
+        width: 140px;
+        background-size: cover;
+      }
+    }
+    &__sub {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      line-height: 32px;
+      padding-top: 1px;
+      &__left {
+        display: flex;
+        font-size: 14px;
+
+        &--category {
+          padding-right: 30px;
+        }
+        &--brand {
+          padding-right: 30px;
+          padding-left: 16px;
+        }
+      }
+      &__right {
+        font-size: 14px;
+        display: block;
+        &--log-in{
+          text-decoration: none;
+          color: $black;
+        }
+        &--register-user {
+          padding-left: 12px;
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+  }
+}
