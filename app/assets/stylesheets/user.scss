@@ -1,0 +1,45 @@
+.signup-main {
+  height: 100vh;
+  width:  100vw;
+  background-color: #b3d4fc;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  &__contents {
+    height: 100%;
+    width:  700px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  &__head {
+    padding: 32px;
+    text-align: center;
+    font-size: 22px;
+  }
+  &__form {
+    height: 100%;
+    padding: 40px 40px 64px;
+  }
+  &__input {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  &__form-group {
+
+  }
+  &__label {
+    font-weight: 600;
+  }
+  &__require {
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: top;
+  }
+  &__field {
+    margin: 8px 0 0;
+    width: 100%;
+  }
+}
