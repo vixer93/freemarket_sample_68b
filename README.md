@@ -2,7 +2,10 @@
 
 ## ER Diagram
 
-![freemarket_sample_68b (1)](https://user-images.githubusercontent.com/58249300/74335932-9ff70300-4de0-11ea-9829-85890e87775a.png)
+
+![freemarket_sample_68b (2)](https://user-images.githubusercontent.com/58249300/74336631-fd3f8400-4de1-11ea-9233-1b2786dfd3bb.png)
+
+
 
 
 
@@ -19,7 +22,7 @@
 |last_name_kana|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 
 ### Association
-- has_many :products
+- has_many :products,dependent:delete_all
 - has_many :contract_histories
 - has_one  :address
 - has_one  :card
@@ -42,7 +45,7 @@
 |category_id|Integer|null: false,foreign_key: true|
 
 ### Association
-- has_many :product_images
+- has_many :product_images,:dependent:delete
 - has_one  :contract_history
 - belongs_to :category
 - belongs_to :ship_from
@@ -61,7 +64,7 @@
 |apartment_name|String|
 
 ### Association
-- belongs_to :user,:dependent:delete
+- belongs_to :user,dependent:delete
 
 
 
@@ -73,7 +76,7 @@
 |card_id|String|null: false|
 
 ### Association
-- belongs_to :user,:dependent:delete
+- belongs_to :user,dependent:delete
 
 
 
@@ -83,7 +86,7 @@
 |name|String|null: false|null: false｜
 
 ### Association
-- has_many :products,:dependent:delete
+- has_many :products
 
 
 
@@ -107,7 +110,7 @@
 |name|String|null: false|
 
 ### Association
-- belongs_to :product,:product,:dependent:delete_all
+- belongs_to :product,dependent:delete
 
 
 
@@ -119,5 +122,7 @@
 |ancestry|String|null: false|
 
 ### Association
-- has_ancestry :product,:dependent:delete_all
+- has_many :products
+- has_ancestry
+
 
