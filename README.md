@@ -61,7 +61,7 @@
 |apartment_name|String|
 
 ### Association
-- belongs_to :user
+- belongs_to :user,:dependent:delete
 
 
 
@@ -73,7 +73,7 @@
 |card_id|String|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :user,:dependent:delete
 
 
 
@@ -83,7 +83,7 @@
 |name|String|null: false|null: false｜
 
 ### Association
-- has_many :products
+- has_many :products,:dependent:delete
 
 
 
@@ -107,7 +107,7 @@
 |name|String|null: false|
 
 ### Association
-- belongs_to :product
+- belongs_to :product,:product,:dependent:delete_all
 
 
 
@@ -119,5 +119,5 @@
 |ancestry|String|null: false|
 
 ### Association
-- has_ancestry :product
+- has_ancestry :product,:dependent:delete_all
 
