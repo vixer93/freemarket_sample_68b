@@ -23,9 +23,9 @@
 
 ### Association
 - has_many :products,dependent:delete_all
-- has_many :contract_histories
-- has_one  :address
-- has_one  :card
+- has_many :contract_histories,dependent:delete
+- has_one  :address,dependent:delete
+- has_one  :card,dependent:delete
 
 
 
@@ -110,7 +110,7 @@
 |name|String|null: false|
 
 ### Association
-- belongs_to :product,dependent:delete
+- belongs_to :product
 
 
 
