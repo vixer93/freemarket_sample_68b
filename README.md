@@ -3,7 +3,10 @@
 ## ER Diagram
 
 
+
+
 ![freemarket_sample_68b (2)](https://user-images.githubusercontent.com/58249300/74336631-fd3f8400-4de1-11ea-9233-1b2786dfd3bb.png)
+
 
 
 
@@ -20,6 +23,7 @@
 |last_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |first_name_|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |last_name_kana|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+
 
 ### Association
 - has_many :products,dependent:delete_all
