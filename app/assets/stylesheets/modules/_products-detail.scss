@@ -1,29 +1,106 @@
 .brand-box {
   padding: 0 60px;
-  .lists {
+  width: 100%;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  &__lists {
     display: flex;
-    .list1 {
+    padding: 17px 0 16px;
+    font-size: 14px;
+    &__list1 {
+      display: flex;
+      align-items: center;
       &--link1 {
         text-decoration: none;
+        padding-right: 10px;
+        // padding-left: 10px;
+        color: $black;
       }
     }
-    .list2 {
+    &__list2 {
+      display: flex;
+      align-items: center;
       &--link2 {
         text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
       }
     }
-    .list3 {
+    &__list3 {
+      display: flex;
+      align-items: center;
       &--link3 {
         text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
       }
     }
-    .list4 {
+    &__list4 {
+      display: flex;
+      align-items: center;
       &--link4 {
         text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
       }
     }
-    .list5 {
-      
+    &__list5 {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      &--individual-product {
+        font-weight: bold;
+      }
     }
   }
 }
+
+.backcolor-box {
+  background-color: #f8f8f8;
+  .item-body {
+    width: 700px;
+    margin: 0 auto;
+    background-color: $white;
+    .details {
+      th {
+        background-color: #eeeeee;
+      }
+    }
+    .links {
+      background-color: #f8f8f8;
+      &__around {
+        display: flex;
+        justify-content: space-between;
+        &--ahead {
+          text-decoration: none;
+          color: $light_green;
+        }
+        &--behind {
+          text-decoration: none;
+          color: $light_green;
+        }
+      }
+      &__category {
+        font-weight: bold;
+        font-size: 22px;
+        &--else {
+          text-decoration: none;
+          color: $light_green;
+        }
+      }
+    }
+  }
+}
+// th {
+//   background-color: pink;
+// }
+
+// .table th {
+//   background-color: black;
+// }
+
+// padding: 8px;
+// border: 1px solid #dedede;
