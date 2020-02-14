@@ -21,7 +21,7 @@
         products1
 
 .backcolor-box 
-  .item-body
+  .item-in-box
     .details
       .detail__table
         %table
@@ -68,19 +68,19 @@
                 発送元の地域
               %td
                 = link_to "#" do
-                  ”青森県”
+                  青森県
             %tr
               %th
                 発送日の目安
               %td
                 1~2日で発送
-    .links
-      .links__around
-        = link_to "#", class: "links__around--ahead" do
-          < 前の商品
-        = link_to "#", class: "links__around--behind" do
-          後ろの商品 >
-      .links__category
-        = link_to "#", class: "links__category--else" do
-          レディースをもっと見る
+  .links
+    .links__around
+      = link_to "#", class: "links__around--ahead" do
+        < 前の商品
+      = link_to "#", class: "links__around--behind" do
+        後ろの商品 >
+    .links__category
+      = link_to "#", class: "links__category--else" do
+        レディースをもっと見る
 
