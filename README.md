@@ -42,14 +42,14 @@
 |send_price|Integer|null: false(enum)|
 |ship_day|Integer|null: false（enum）|
 |user_id|Integer|null: false, foreign_key: true|
-|ship_from_id|Integer|null: false,foreign_key: true|
+|prefecture_id|Integer|null: false,foreign_key: true|
 |category_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - has_many :product_images,dependent:delete_all
 - has_one  :contract_history,dependent:delete
 - belongs_to :category　
-- belongs_to :ship_from
+- belongs_to :prefecture
 - belongs_to :user
 
 
@@ -59,7 +59,7 @@
 |------|----|-------|
 |user_id|Integer|null:false,foreign_key: true|
 |postal_code|String|null: false, format: {with:/\A\d{3}[_]\d{4}\z/}|
-|prefectures|String|null: faise|
+|prefecture_id|String|null: faise, foreign_key: true|
 |municipality|String|null: faise|
 |block_number|String|null: faise|
 |apartment_name|String|
@@ -81,10 +81,10 @@
 
 
 
-## ship_fromテーブル
+## prefecturesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|String|null: false|null: false｜
+|name|String|null: false|
 
 ### Association
 - has_many :products
