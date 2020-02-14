@@ -77,8 +77,14 @@
           color: #fff;
           position: relative;
           top: 15px;
-          left: 30px;
-          padding: 15px 70px;
+          left: 10px;
+          padding: 15px 90px;
+          background: url(facebook-icon.png),no-repeat 3px top;
+          background-position: left top;
+          background-size: 10% auto;
+          background-repeat: no-repeat;
+          background-position-x: 0px;
+          background-position-y: center;
         }
         .facebook-icon {
           height: 600px;
@@ -101,6 +107,11 @@
         top: 405px;
         right: 550px;
         padding: 15px 100px;
+        background: url(google-icon.jpg),no-repeat 3px top;
+        background-position: left top;
+        background-size: 10% auto;
+        background-repeat: no-repeat;
+        background-position-y: center;
       }
     }
     .new_user {
