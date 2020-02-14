@@ -1,5 +1,29 @@
 .brand-box {
-  display: block;
-  display: flex;
   padding: 0 60px;
+  .lists {
+    display: flex;
+    .list1 {
+      &--link1 {
+        text-decoration: none;
+      }
+    }
+    .list2 {
+      &--link2 {
+        text-decoration: none;
+      }
+    }
+    .list3 {
+      &--link3 {
+        text-decoration: none;
+      }
+    }
+    .list4 {
+      &--link4 {
+        text-decoration: none;
+      }
+    }
+    .list5 {
+      
+    }
+  }
 }
