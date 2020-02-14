@@ -1,14 +1,11 @@
-*{
-  box-sizing: border-box;
-}
 
-body{
-  margin: 0;
-  padding: 0;
+.appBtn:hover,.googleBtn:hover {
+  opacity: 0.5 ;
 }
 
 .appBtn{
-  width: 180px;
+  width: 150px;
+  margin: 13px;
 }
 
 .googleBtn{

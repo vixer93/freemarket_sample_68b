@@ -1,5 +1,6 @@
 # Load DSL and set up stages
 require "capistrano/setup"
+<<<<<<< HEAD
 # Include default deployment tasks
 require "capistrano/deploy"
 require "capistrano/rbenv"
@@ -8,6 +9,11 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano3/unicorn"
 
+=======
+
+# Include default deployment tasks
+require "capistrano/deploy"
+>>>>>>> origin/feature/pull_origin_master1505
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -38,6 +44,14 @@ install_plugin Capistrano::SCM::Git
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
+<<<<<<< HEAD
+=======
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano3/unicorn'
+>>>>>>> origin/feature/pull_origin_master1505
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

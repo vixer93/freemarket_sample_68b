@@ -1,15 +1,4 @@
-*{
-  box-sizing: border-box;
-}
 
-body{
-  margin: 0;
-  padding: 0;
-}
-
-.products--head{
-  text-decoration: none;
-}
 
 .head{
   font-weight: bold;
@@ -17,11 +6,21 @@ body{
   color: $light_green;
 }
 
+.products--head{
+  text-decoration: none;
+}
+
+
 .listBtn{
   text-decoration: none;
   display: inline-block;
   background-color: $white;
 }
+
+.listBtn:hover {
+  opacity: 0.5 ;
+}
+
 
 .product--name{
   overflow: hidden;

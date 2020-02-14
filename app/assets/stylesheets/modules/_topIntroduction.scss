@@ -1,6 +1,7 @@
 .box {
   padding: 60px 20px;
   &__top {
+
     &--title {
       font-size: 26px;
       text-align: center;
@@ -15,11 +16,12 @@
     }
   }
   &__main {
-    padding-top: 40px;
+    padding: 40px 0px 40px 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     &--left {
+      width: 30%;
       padding-right: 45px;
       position: relative;
       &--sub-title {
@@ -32,12 +34,17 @@
         &--black {
         }
       }
+      &--text{
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 16px 0 0;
+        max-width: 306px;
+      }
       &--num1 {
         font-size: 30px;
         background-color: $light_green;
         color: $white;
         padding: 10px 20px;
-        width: 16px;
         border-radius: 4%;
         position: absolute;
         top: 0;
@@ -45,6 +52,7 @@
       }
     }
     &--center {
+      width: 30%;
       padding-right: 45px;
       position: relative;
       &--sub-title {
@@ -57,12 +65,18 @@
         &--black{
         }
       }
+      &--text{
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 16px 0 0;
+        align-items: center;
+        max-width: 306px;
+      }
       &--num2 {
         font-size: 30px;
         background-color: $light_green;
         color: $white;
         padding: 10px 20px;
-        width: 16px;
         border-radius: 4%;
         position: absolute;
         top: 0;
@@ -70,7 +84,9 @@
       }
     }
     &--right {
+      width: 30%;
       position: relative;
+      padding-bottom: 25px;
       &--sub-title {
         display: flex;
         font-size: 24px;
@@ -81,12 +97,17 @@
           color: $light_green;
         }
       }
+      &--text{
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 16px 0 0;
+        max-width: 306px;
+      }
       &--num3 {
         font-size: 30px;
         background-color: $light_green;
         color: $white;
         padding: 10px 20px;
-        width: 16px;
         border-radius: 4%;
         position: absolute;
         top: 0;

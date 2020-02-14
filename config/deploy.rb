@@ -1,3 +1,8 @@
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feature/pull_origin_master1505
 lock '3.12.0'
 
 # Capistranoのログの表示に利用する
@@ -29,4 +34,8 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> origin/feature/pull_origin_master1505
