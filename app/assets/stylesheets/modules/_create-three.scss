@@ -1,0 +1,28 @@
+.block {
+  background-image: url(bg-topMiddleDl-pict.jpg);
+  height: 400px;
+  background-size: cover;
+  color: $white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  &__in-box {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    &__title {
+      font-size: 27px;
+      font-weight: bold;
+    }
+    &__text{
+      font-size: 18px;
+      margin: 20px 0;
+      &--1 {
+      }
+      &--2 {
+      }
+      &--3 {
+      }
+    }
+  }
+}
