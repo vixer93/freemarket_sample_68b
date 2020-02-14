@@ -1,0 +1,97 @@
+.box {
+  padding: 60px 20px;
+  &__top {
+    &--title {
+      font-size: 26px;
+      text-align: center;
+      font-weight: bold;
+      padding-bottom: 7px;
+    }
+    &--line {
+      height: 4px;
+      width: 70px;
+      background-color: $light_green;
+      margin: 0 auto;
+    }
+  }
+  &__main {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--left {
+      padding-right: 45px;
+      position: relative;
+      &--sub-title {
+        display: flex;
+        font-size: 24px;
+        margin: 0 63px;
+        &--green {
+          color: $light_green;
+        }
+        &--black {
+        }
+      }
+      &--num1 {
+        font-size: 30px;
+        background-color: $light_green;
+        color: $white;
+        padding: 10px 20px;
+        width: 16px;
+        border-radius: 4%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &--center {
+      padding-right: 45px;
+      position: relative;
+      &--sub-title {
+        display: flex;
+        font-size: 24px;
+        margin: 0 32px;
+        &--green {
+          color: $light_green;
+        }
+        &--black{
+        }
+      }
+      &--num2 {
+        font-size: 30px;
+        background-color: $light_green;
+        color: $white;
+        padding: 10px 20px;
+        width: 16px;
+        border-radius: 4%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &--right {
+      position: relative;
+      &--sub-title {
+        display: flex;
+        font-size: 24px;
+        margin: 0 69px;
+        &--black {
+        }
+        &--green {
+          color: $light_green;
+        }
+      }
+      &--num3 {
+        font-size: 30px;
+        background-color: $light_green;
+        color: $white;
+        padding: 10px 20px;
+        width: 16px;
+        border-radius: 4%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
