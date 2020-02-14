@@ -6,7 +6,7 @@
       %br FURIMAはだれでもかんたんに出品・購入できる
       %br フリマアプリです
     .create-one__body-main--btn
-      %a.abtn(href="#")
-        %img(src="assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg")/
-      %a.gbtn(href="#")
-        %img(src="google-play-badge")/
+      = link_to "#", class: "icon" do
+        = image_tag 'google-play-badge.png',class: "aBtn"
+      = link_to "#", class: "icon" do
+        = image_tag 'google-play-badge.png',class: "bBtn"

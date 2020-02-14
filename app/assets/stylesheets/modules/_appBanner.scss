@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.appBtn{
+  width: 180px;
+}
+
+.googleBtn{
+  width: 180px;
+}
+
+.banner {
+  background-color: gray;
+  padding: 100px 40px;
+  position: relative;
+  background-image: url(bg-appBanner-pict.jpg);
+  background-size: cover;
+  background-position: center;
+  &__inner{
+    text-align: center;
+    color: $white;
+    &--title{
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+    &--text{
+      font-size: 35px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+    &--icon{
+      width: 100%;
+      justify-content: center;
+      margin: 20px auto 0;
+    }
+  }
+}
+
