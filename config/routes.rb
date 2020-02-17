@@ -9,3 +9,6 @@ Rails.application.routes.draw do
   root "tests#index"
   resources :users, only: [:show]
 end
+
+  root to: "home#index"
+end

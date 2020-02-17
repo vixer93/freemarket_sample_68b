@@ -1,0 +1,18 @@
+.header
+  .header__box
+    .header__box__main
+      = link_to root_path do
+        .header__box__main--icon
+    .header__box__sub
+      .header__box__sub__left
+        .header__box__sub__left--category
+          = link_to "#", class: "categoryBtn" do
+            = "カテゴリー"
+        .header__box__sub__left--brand
+          = link_to "#", class: "brandBtn" do
+            = "ブランド"
+      .header__box__sub__right
+        = link_to '#', class: "header__box__sub__right--log-in" do
+          ログイン
+        = link_to '#', class: "header__box__sub__right--register-user" do
+          新規会員登録
