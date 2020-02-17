@@ -1,0 +1,43 @@
+= render 'shared/header'
+.new-listing
+  .new-listing__single-container
+    .new-listing__single-head
+      商品の情報を入力
+    .new-listing__sell-form
+      .new-listing__sell-upload-box
+        .new-listing__sell-upload-head
+          出品画像
+          .new-listing__form-require
+            必須
+      .new-listing__p
+        最大10枚までアップロードできます
+      .new-listing__sell-dropbox
+        .new-listing__sell-upload-items-container
+        .new-listing__sell-upload-drop-box
+          %input.sell-upload-drop-file{:multiple => "", :name => "image1", :type => "file"}/
+          %pre.visible-pc
+            :preserve
+              ドラッグアンドドロップ
+              またはクリックしてファイルをアップロード
+= render 'shared/footer'
+
+
+
+-# %main.tk-single-main
+-#   .tk-single-main__tk-single-container
+-#     .tk-single-main__tk-data-reactroot
+-#       .tk-single-main__tk-single-header
+-#         商品の情報を入力
+-#       %form.tk-sell-form
+-#         .tk-sell-form__sell-upload-box
+-#           %h3.sell-upload-head
+-#             出品画像 
+-#             %span.form-require 
+-#               必須
+-#           %p
+-#             最大10枚までアップロードできます
+
+
+
+
+
