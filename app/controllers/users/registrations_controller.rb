@@ -24,8 +24,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def new_address
-    # @user = User.new
-    # @address = @user.build_address
   end
 
   def create_address
@@ -65,7 +63,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
