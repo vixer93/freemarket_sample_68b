@@ -10,7 +10,7 @@ body{
 
 .categoryBtn,.brandBtn {
   text-decoration: none;
-  color: $black;
+  color: black;
 }
 
 .categoryBtn:hover,.brandBtn:hover {
@@ -62,12 +62,12 @@ body{
         display: block;
         &--log-in{
           text-decoration: none;
-          color: $black;
+          color: black;
         }
         &--register-user {
           padding-left: 12px;
           text-decoration: none;
-          color: $black;
+          color: black;
         }
       }
     }
