@@ -21,8 +21,26 @@
         products1
 
 .backcolor-box 
-  .item-in-box
-    .details
+  .details-in-box
+    .detail
+      .detail--name
+        product1
+      %ul.detail--main-img
+        %li
+          = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", class: "detail--main-img--image"
+          %ul
+            %li
+              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140";
+            %li
+              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140";
+            %li
+              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140";
+      .detail--price
+        ¥ 10000
+      .detail--price-description
+        (税込) 送料込み
+      .detail--item-name
+        product1
       .detail__table
         %table
           %tbody
@@ -81,6 +99,6 @@
       = link_to "#", class: "links__around--behind" do
         後ろの商品 >
     .links__category
-      = link_to "#", class: "links__category--else" do
+      = link_to "#", class: "links__category--related" do
         レディースをもっと見る
 
