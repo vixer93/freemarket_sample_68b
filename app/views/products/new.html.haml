@@ -13,12 +13,13 @@
         最大10枚までアップロードできます
       .new-listing__sell-dropbox
         .new-listing__sell-upload-items-container
-        .new-listing__sell-upload-drop-box
-          %input.sell-upload-drop-file{:multiple => "", :name => "image1", :type => "file"}/
-          %pre.visible-pc
-            :preserve
-              ドラッグアンドドロップ
-              またはクリックしてファイルをアップロード
+        %label
+          .new-listing__sell-upload-drop-box
+            %input.sell-upload-drop-file{:multiple => "", :name => "image1", :type => "file"}/
+            %pre.visible-pc
+              :preserve
+                ドラッグアンドドロップ
+                またはクリックしてファイルをアップロード
 = render 'shared/footer'
 
 
