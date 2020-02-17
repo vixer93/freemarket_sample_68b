@@ -1,7 +1,12 @@
 @import "./reset";
 @import "config/colors";
-@import "modules/_appBanner";
-@import "modules/_header";
-@import "modules/_footer";
-@import "modules/_displayBtn";
-@import "modules/_products-detail"
+@import "modules/displayBtn";
+@import "modules/header";
+@import "modules/mainVisual";
+@import "modules/topIntroduction";
+@import "modules/topMiddleDl";
+@import "modules/topKeyFeatures";
+@import "modules/pickupCategory";
+@import "modules/pickupBrand";
+@import "modules/appBanner";
+@import "modules/footer";

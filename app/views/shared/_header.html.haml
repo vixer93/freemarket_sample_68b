@@ -6,9 +6,11 @@
     .header__box__sub
       .header__box__sub__left
         .header__box__sub__left--category
-          カテゴリー
+          = link_to "#", class: "categoryBtn" do
+            = "カテゴリー"
         .header__box__sub__left--brand
-          ブランド
+          = link_to "#", class: "brandBtn" do
+            = "ブランド"
       .header__box__sub__right
         = link_to '#', class: "header__box__sub__right--log-in" do
           ログイン

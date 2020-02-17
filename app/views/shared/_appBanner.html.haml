@@ -1,0 +1,13 @@
+.wrapper
+  .banner
+    %section.banner__image
+    .banner__inner
+      %h2.banner__inner--title
+        だれでも簡単、人生を変えるフリマアプリ
+      %p.banner__inner--text
+        今すぐ無料ダウンロード
+      .banner__inner--icon
+        = link_to "#", class: "banner__inner--icon" do
+          = image_tag 'bag_app.png',class: "appBtn"
+        = link_to "#", class: "banner__inner--icon" do
+          = image_tag 'google-play-badge.png',class: "googleBtn"
