@@ -8,3 +8,6 @@ Rails.application.routes.draw do
   end
   root "tests#index"
 end
+
+  root to: "home#index"
+end
