@@ -16,3 +16,15 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "./reset";
+@import "config/colors";
+@import "modules/displayBtn";
+@import "modules/header";
+@import "modules/mainVisual";
+@import "modules/topIntroduction";
+@import "modules/topMiddleDl";
+@import "modules/topKeyFeatures";
+@import "modules/pickupCategory";
+@import "modules/pickupBrand";
+@import "modules/appBanner";
+@import "modules/footer";

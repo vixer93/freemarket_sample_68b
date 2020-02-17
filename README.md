@@ -4,7 +4,9 @@
 
 
 
+
 ![freemarket_sample_68b (2)](https://user-images.githubusercontent.com/58249300/74336631-fd3f8400-4de1-11ea-9233-1b2786dfd3bb.png)
+
 
 
 
@@ -21,6 +23,7 @@
 |last_name|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |first_name_|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
 |last_name_kana|String|null: false, format: {with: /^[ -~｡-ﾟ]*$/}|
+
 
 ### Association
 - has_many :products,dependent:delete_all
@@ -41,15 +44,13 @@
 |brand|String|
 |send_price|Integer|null: false(enum)|
 |ship_day|Integer|null: false（enum）|
-|user_id|Integer|null: false, foreign_key: true|
-|prefecture_id|Integer|null: false,foreign_key: true|
+|buyer_id|Integer|null: false|
 |category_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - has_many :product_images,dependent:delete_all
 - has_one  :contract_history,dependent:delete
 - belongs_to :category　
-- belongs_to :prefecture
 - belongs_to :user
 
 
@@ -73,22 +74,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|Integer|null: false,foreign_key: true|
-|customer_id|String|null: false|
-|card_id|String|null: false|
+|customer_id_token|String|null: false|
+|card_id_token|String|null: false|
 
 ### Association
 - belongs_to :user
-
-
-
-## prefecturesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|String|null: false|
-
-### Association
-- has_many :products
-
 
 
 
@@ -96,7 +86,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |product_id|Integer|null: false,foreign_key:true|
-|user_id|Integer|null: false,foreign_key: true|
+|buyer_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :product
