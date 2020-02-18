@@ -11,7 +11,7 @@
     &--line {
       height: 4px;
       width: 70px;
-      background-color: $light_green;
+      background-color: light_green;
       margin: 0 auto;
     }
   }
@@ -29,7 +29,7 @@
         font-size: 24px;
         margin: 0 63px;
         &--green {
-          color: $light_green;
+          color: light_green;
         }
         &--black {
         }
@@ -42,8 +42,8 @@
       }
       &--num1 {
         font-size: 30px;
-        background-color: $light_green;
-        color: $white;
+        background-color: light_green;
+        color: white;
         padding: 10px 20px;
         border-radius: 4%;
         position: absolute;
@@ -60,7 +60,7 @@
         font-size: 24px;
         margin: 0 32px;
         &--green {
-          color: $light_green;
+          color: light_green;
         }
         &--black{
         }
@@ -74,8 +74,8 @@
       }
       &--num2 {
         font-size: 30px;
-        background-color: $light_green;
-        color: $white;
+        background-color: light_green;
+        color: white;
         padding: 10px 20px;
         border-radius: 4%;
         position: absolute;
@@ -94,7 +94,7 @@
         &--black {
         }
         &--green {
-          color: $light_green;
+          color: light_green;
         }
       }
       &--text{
@@ -105,8 +105,8 @@
       }
       &--num3 {
         font-size: 30px;
-        background-color: $light_green;
-        color: $white;
+        background-color: light_green;
+        color: white;
         padding: 10px 20px;
         border-radius: 4%;
         position: absolute;

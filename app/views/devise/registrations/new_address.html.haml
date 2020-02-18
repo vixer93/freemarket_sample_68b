@@ -5,6 +5,7 @@
     = form_with model: @address, remote: true, class: "signup-main__form" do |f|
       .signup-main__input
         .signup-main__form-group
+          = render "devise/shared/error_messages", resource: resource
           = f.label :ship_family_name,"送付先氏名", class: "signup-main__label"
           %span.signup-main__require
             必須
@@ -12,7 +13,8 @@
           .signup-main__personal-name
             = f.text_field :ship_family_name, placeholder: "例) 山田", class: "signup-main__field signup-main__field--side"
             = f.text_field :ship_first_name, placeholder: "例) 彩", class: "signup-main__field"
-          = render "devise/shared/error_messages", resource: resource
+          .add_address_ship_family_name.add_all
+          .add_address_ship_first_name.add_all
 
         .signup-main__form-group
           = f.label :ship_family_name_kana,"送付先氏名カナ", class: "signup-main__label"
@@ -22,6 +24,8 @@
           .signup-main__personal-name
             = f.text_field :ship_family_name_kana, placeholder: "例) ヤマダ", class: "signup-main__field signup-main__field--side"
             = f.text_field :ship_first_name_kana, placeholder: "例) アヤ", class: "signup-main__field"
+          .add_address_ship_family_name_kana.add_all
+          .add_address_ship_first_name_kana.add_all
 
         .signup-main__form-group
           = f.label :postal_code,"郵便番号", class: "signup-main__label"
@@ -29,6 +33,7 @@
             必須
           %br
           = f.text_field :postal_code, placeholder: "例) 123-4567", class: "signup-main__field"
+        .add_address_postal_code.add_all
 
         .signup-main__form-group
           = f.label :prefecture,"都道府県", class: "signup-main__label"
@@ -36,6 +41,7 @@
             必須
           %br
           = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "--"}, {class: "signup-main__prefecture"}
+        .add_address_prefecture_id.add_all
 
         .signup-main__form-group
           = f.label :municipality,"市区町村", class: "signup-main__label"
@@ -43,13 +49,15 @@
             必須
           %br
           = f.text_field :municipality, placeholder: "例) 横浜市緑区", class: "signup-main__field"
+        .add_address_municipality.add_all
 
         .signup-main__form-group
           = f.label :block_number,"番地", class: "signup-main__label"
           %span.signup-main__require
             必須
           %br
-          = f.text_field :block_number, placeholder: "例) 青山1-1-1", class: "signup-main__field"
+          = f.text_field :block_number, placeholder: "例) 青山1-1-1", class: "signup-main__field"        
+        .add_address_block_number.add_all
 
         .signup-main__form-group
           = f.label :apartment_name,"建物名", class: "signup-main__label"
@@ -64,5 +72,6 @@
             任意
           %br
           = f.text_field :phone_number, placeholder: "例) 09012345678", class: "signup-main__field"
+
 
         = f.submit "登録", class: "signup-main__submit"

@@ -6,7 +6,7 @@
     width: 100%;
     background-color: #f5f5f5;
     .header-title {
-      height: 100%;
+      height: 150%;
       width: 35%;
       background-color: #f5f5f5;
       margin: 0 auto;
@@ -37,7 +37,7 @@
         p.not-account {
           text-align: center;
           margin: 0px;
-          padding-top: 50px;
+          padding-top: 80px;
           font-size: 15px;
         }
       }
@@ -51,8 +51,8 @@
       .signup_link {
         text-decoration: none;
         position: absolute;
-        top: 73px;
-        left: 100px;
+        top: 102px;
+        left: 165px;
         padding: 10px 100px;
         color: #fff;
       }
@@ -104,8 +104,8 @@
         text-decoration: none;
         color: black;
         position: absolute;
-        top: 405px;
-        right: 550px;
+        top: 480px;
+        right: 725px;
         padding: 15px 100px;
         background: url(google-icon.jpg),no-repeat 3px top;
         background-position: left top;
@@ -124,11 +124,11 @@
       position: relative;
       li.input-address {
         position: absolute;
-        left: 90px;
+        left: 150px;
         bottom: 300px;
         input {
           height: 40px;
-          width: 310px;
+          width: 330px;
           line-height: 1.5;
           font-size: 16px;
           padding-left: 20px;
@@ -140,11 +140,11 @@
       }
       li.input-password {
         position: absolute;
-        left: 90px;
+        left: 150px;
         bottom: 230px;
         input {
           height: 40px;
-          width: 310px;
+          width: 330px;
           line-height: 1.5;
           font-size: 16px;
           padding-left: 20px;
@@ -160,7 +160,7 @@
         width: 335px;
         position: absolute;
         bottom: 100px;
-        left: 90px;
+        left: 150px;
         background: #ea352d;
         border: 1px solid #ea352d;
         color: #fff;
@@ -168,8 +168,8 @@
       }
       .forgot-link-page {
         position: relative;
-        top: 170px;
-        left: 100px;
+        top: 210px;
+        left: 150px;
       }
     }
     .footer {
