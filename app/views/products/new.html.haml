@@ -1,0 +1,42 @@
+= render 'shared/header'
+.new-listing
+  .new-listing__single-container
+    .new-listing__single-head
+      商品の情報を入力
+    .new-listing__sell-form
+      .new-listing__sell-upload-box
+        .new-listing__sell-upload-head
+          出品画像
+          .new-listing__form-require
+            必須
+      .new-listing__p
+        最大10枚までアップロードできます
+      .new-listing__sell-dropbox
+        .new-listing__sell-upload-items-container
+        %label
+          .new-listing__sell-upload-drop-box
+            %input.sell-upload-drop-file{:multiple => "", :name => "image1", :type => "file"}/
+            %pre.visible-pc
+              :preserve
+                ドラッグアンドドロップ
+                またはクリックしてファイルをアップロード
+    .new-listing__sell-content
+      .new-listing__form-group
+        %label
+          .new-listing__sell-upload-head
+            商品名
+            .new-listing__form-require
+              必須
+          %input.input-default{:placeholder => "商品名（必須 40文字まで)", :value => "",size: 76}/
+      .new-listing__form-group
+        %label
+          .new-listing__sell-upload-head
+            商品の説明
+            .new-listing__form-require
+              必須
+          %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+
+= render 'shared/footer'
+
+
+
