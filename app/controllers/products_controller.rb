@@ -10,6 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def create
+    @product = Prduct.new(product_params)
+    if @product.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
