@@ -8,6 +8,18 @@
         .header__box__sub__left--category
           = link_to "#", class: "categoryBtn" do
             = "カテゴリー"
+          .hideTree
+            %ul.hideTree__parent
+              - @category_parents.each do |parent|
+                %li.hideTree__parent--item
+                  = link_to "#", class: "item__link" do
+                    = parent.name
+            %ul.hideTree__parent
+              - @category_children.each do |child|
+                %li.hideTree__parent--item
+                  = link_to "#", class: "item__link" do
+                    = child.name
+
         .header__box__sub__left--brand
           = link_to "#", class: "brandBtn" do
             = "ブランド"

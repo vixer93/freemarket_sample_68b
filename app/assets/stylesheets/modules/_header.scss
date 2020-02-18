@@ -51,6 +51,41 @@ body{
 
         &--category {
           padding-right: 30px;
+          .hideTree{
+            // display: none;
+            display: flex;
+            z-index: 2;
+            position: absolute;
+            background-color: $white;
+            width: 240px;
+            &__parent{
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              background-color: $white;
+              &--item{
+                position: relative;
+                .item__link{
+                  color: $black;
+                  text-decoration: none;
+                  line-height: 32px;
+                  background-position: center right;
+                  background-repeat: no-repeat;
+                  background-size: 18px;
+                  padding-right: 30px;
+                  display: block;
+                  width: 240px;
+                  padding: 3px 8px 3px 5px;
+                  border-bottom: 1px solid #f8f8f8;
+                  &:hover{
+                    background-position: -100% 0;
+                    color: orange;
+                  
+                  }
+                }
+              }
+            }
+          }
         }
         &--brand {
           padding-right: 30px;
