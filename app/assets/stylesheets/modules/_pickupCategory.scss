@@ -7,13 +7,13 @@
 .head{
   font-weight: bold;
   text-align: center;
-  color: $light_green;
+  color: light_green;
 }
 
 .listBtn{
   text-decoration: none;
   display: inline-block;
-  background-color: $white;
+  background-color: white;
 }
 
 .product--name{
@@ -78,8 +78,8 @@
         width: 220px;
         display: inline-block;
         &--body{
-          background-color: $white;
-          color: $black;
+          background-color: white;
+          color: black;
           padding: 16px;
           &__details{
             font-size: 16px;

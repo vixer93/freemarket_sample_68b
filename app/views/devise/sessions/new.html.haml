@@ -9,7 +9,7 @@
         %p.not-account
           アカウントをお持ちでない方はこちら
       %li.signup-btn
-      = link_to("新規会員登録", root_path, {class: "signup_link"})
+      = link_to("新規会員登録", new_user_registration_path, {class: "signup_link"})
     %ul.othersite-login
       %li.facebook-btn
         = link_to("Facebookでログイン","https://ja-jp.facebook.com/", class: "facebook-font") 
@@ -26,7 +26,7 @@
       = link_to("パスワードをお忘れの方", root_path, {class: "forgot-link-page"})
     .footer
       %ul.footer__bottom
-        %li.tail-icon 
+        %li.tail-icon
           %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?35314277", width: "80",class: "mercari-icon"}
 
         %li.tail-title © Mercari, Inc.
