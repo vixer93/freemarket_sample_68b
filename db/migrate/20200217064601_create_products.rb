@@ -9,7 +9,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :brand
       t.integer :send_price, null: false, default: 0
       t.integer :ship_day, null: false, default: 0
-      t.integer :buyer_id, null: false, foreign_key: true
+      t.integer :user_id, null: false, foreign_key: true
       t.integer :category_id, null: false, foreign_key: true
       t.timestamps
     end
