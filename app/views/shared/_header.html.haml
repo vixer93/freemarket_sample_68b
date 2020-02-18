@@ -12,7 +12,7 @@
           = link_to "#", class: "brandBtn" do
             = "ブランド"
       .header__box__sub__right
-        = link_to destroy_user_session_path, method: "delete" do
+        = link_to destroy_user_session_path, class:"header__box__sub__right--log-out", method: "delete" do
           ログアウト
         = link_to new_user_session_path, class: "header__box__sub__right--log-in" do
           ログイン

@@ -60,14 +60,31 @@ body{
       &__right {
         font-size: 14px;
         display: block;
+        &--log-out{
+          text-decoration: none;
+          color: black;
+        }
+        &--log-out:hover{
+          text-decoration: none;
+          color:red;
+        }
         &--log-in{
           text-decoration: none;
           color: black;
+        }
+        &--log-in:hover{
+          text-decoration: none;
+          color: red;
         }
         &--register-user {
           padding-left: 12px;
           text-decoration: none;
           color: black;
+        }
+        &--register-user:hover {
+          padding-left: 12px;
+          text-decoration: none;
+          color: red;
         }
       }
     }
