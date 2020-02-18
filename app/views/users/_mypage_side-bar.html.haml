@@ -4,31 +4,22 @@
       %p 商品情報
       %li.exhibition
         = link_to('出品する', root_path, class: "link_exhibition")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.exhibited
         = link_to('出品した商品-出品中', root_path, class: "link_exhibited")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.transaction
         = link_to('出品した商品-取引中', root_path, class: "link_transaction")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.sold
         = link_to('出品した商品-売却済み', root_path, class: "link_sold")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.purchase
         = link_to('購入した商品-取引中', root_path, class: "link_purchase")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.purchased
         = link_to('購入した商品-過去の取引', root_path, class: "link_purchased")
-        = icon('fas', 'angle-right', class: "right-icon")
   .side-bar_lower
     %ul.mypages-box
       %p 設定
       %li.mypage
         = link_to('マイページ', root_path, class: "link_mypage")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.card
         = link_to('支払い方法', root_path, class: "link_card")
-        = icon('fas', 'angle-right', class: "right-icon")
       %li.logout
         = link_to('ログアウト', root_path, class: "link_logout")
-        = icon('fas', 'angle-right', class: "right-icon")
