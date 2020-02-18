@@ -2,11 +2,11 @@
   .header
     .header-title
       = link_to(root_path, {class: "signup_link"}) do
-        %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?35314277",class: "header_link_icon"}
+        = image_tag 'logo/logo.png', class: "header_link_icon", alt: "frima"
   .container
     %ul.signup-box
       %li.signup-font
-        %p.not-account 
+        %p.not-account
           アカウントをお持ちでない方はこちら
       %li.signup-btn
       = link_to("新規会員登録", root_path, {class: "signup_link"})
