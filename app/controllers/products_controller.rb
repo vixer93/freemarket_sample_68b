@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
   
   def new
-    @products = Product.all
+    @product = Product.new
+    @product.images.new
   end
 
   def create
