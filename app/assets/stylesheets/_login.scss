@@ -44,7 +44,7 @@
       width: 35%;
       margin: 0 auto;
       padding: 0px;
-      padding-top: 70px;
+      padding-top: 5px;
       list-style: none;
       li.facebook-btn {
         height: 50px;
@@ -86,7 +86,7 @@
         text-decoration: none;
         color: black;
         position: absolute;
-        top: 652px;
+        top: 588px;
         right: 545px;
         padding: 15px 100px;
         background: url(google-icon.jpg),no-repeat 3px top;
@@ -98,7 +98,7 @@
     }
     .new_user {
       background-color: #fff;
-      height: 25%;
+      height: 15%;
       width: 35%;
       list-style: none;
       padding: 0px;
@@ -107,7 +107,7 @@
       li.input-address {
         position: absolute;
         left: 90px;
-        bottom: 350px;
+        bottom: 300px;
         input {
           height: 40px;
           width: 325px;
@@ -123,7 +123,7 @@
       li.input-password {
         position: absolute;
         left: 90px;
-        bottom: 290px;
+        bottom: 240px;
         input {
           height: 40px;
           width: 325px;
@@ -138,7 +138,7 @@
       }
       .login-btn {
         height: 50px;
-        bottom: 50px;
+        bottom: 250px;
         width: 335px;
         position: absolute;
         bottom: 100px;
@@ -150,7 +150,7 @@
       }
       .forgot-link-page {
         position: relative;
-        top: 250px;
+        top: 130px;
         left: 90px;
       }
     }
@@ -175,8 +175,6 @@
               width: 100px;
             }
           }
-        }
-        li.tail-title {
         }
       }
     }
