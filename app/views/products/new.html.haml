@@ -20,25 +20,23 @@
               :preserve
                 ドラッグアンドドロップ
                 またはクリックしてファイルをアップロード
+    .new-listing__sell-content
+      .new-listing__form-group
+        %label
+          .new-listing__sell-upload-head
+            商品名
+            .new-listing__form-require
+              必須
+          %input.input-default{:placeholder => "商品名（必須 40文字まで)", :value => "",size: 76}/
+      .new-listing__form-group
+        %label
+          .new-listing__sell-upload-head
+            商品の説明
+            .new-listing__form-require
+              必須
+          %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+
 = render 'shared/footer'
-
-
-
--# %main.tk-single-main
--#   .tk-single-main__tk-single-container
--#     .tk-single-main__tk-data-reactroot
--#       .tk-single-main__tk-single-header
--#         商品の情報を入力
--#       %form.tk-sell-form
--#         .tk-sell-form__sell-upload-box
--#           %h3.sell-upload-head
--#             出品画像 
--#             %span.form-require 
--#               必須
--#           %p
--#             最大10枚までアップロードできます
-
-
 
 
 
