@@ -1,29 +1,11 @@
 .login-wrapper {
-  height: 150vh;
+  height: 1400px;
   width: 100vw;
-  .login-header {
-    height: 10%;
-    width: 100%;
-    background-color: #f5f5f5;
-    .login-header-title {
-      height: 150%;
-      width: 35%;
-      background-color: #f5f5f5;
-      margin: 0 auto;
-      .header_link_icon {
-        height: 50%;
-        width: 100%;
-        margin: 0 auto;
-        padding-top: 30px;
-      }
-    }
-  }
   .login-container {
-    height: 80%;
+    height: 100%;
     width: 100%;
     background-color:#f5f5f5;
-    padding: 0px;
-    margin: 0px;
+    padding-top: 100px;
     ul.signup-box {
       background-color: #fff;
       height: 20%;
@@ -46,13 +28,12 @@
         width: 328px;
         background-color: #0099e8;
         margin: 0 auto;
-
       }
       .signup_link {
         text-decoration: none;
         position: absolute;
         top: 102px;
-        left: 165px;
+        left: 110px;
         padding: 10px 100px;
         color: #fff;
       }
@@ -70,6 +51,7 @@
         width: 328px;
         background: #385185;
         margin: 0 auto;
+        margin-top: 50px;
         .facebook-font {
           text-decoration: none;
           height: 100%;
@@ -104,8 +86,8 @@
         text-decoration: none;
         color: black;
         position: absolute;
-        top: 625px;
-        right: 725px;
+        top: 652px;
+        right: 545px;
         padding: 15px 100px;
         background: url(google-icon.jpg),no-repeat 3px top;
         background-position: left top;
@@ -124,11 +106,11 @@
       position: relative;
       li.input-address {
         position: absolute;
-        left: 150px;
+        left: 90px;
         bottom: 350px;
         input {
           height: 40px;
-          width: 330px;
+          width: 325px;
           line-height: 1.5;
           font-size: 16px;
           padding-left: 20px;
@@ -140,11 +122,11 @@
       }
       li.input-password {
         position: absolute;
-        left: 150px;
+        left: 90px;
         bottom: 290px;
         input {
           height: 40px;
-          width: 330px;
+          width: 325px;
           line-height: 1.5;
           font-size: 16px;
           padding-left: 20px;
@@ -160,7 +142,7 @@
         width: 335px;
         position: absolute;
         bottom: 100px;
-        left: 150px;
+        left: 90px;
         background: #ea352d;
         border: 1px solid #ea352d;
         color: #fff;
@@ -168,13 +150,13 @@
       }
       .forgot-link-page {
         position: relative;
-        top: 210px;
-        left: 150px;
+        top: 250px;
+        left: 90px;
       }
     }
     .login-footer {
       background-color: #f5f5f5;
-      height: 50%;
+      height: 200px;
       width: 100%;
       margin: 0px;
       padding: 0px;
@@ -184,13 +166,17 @@
         margin: 0 auto;
         text-align: center;
         li.tail-icon {
-          .mercari-icon {
-            padding-top: 20px;
+          .signup_link {
+            height: 50px;
+            width: 100px;
+            .link_icon {
+              padding-top: 20px;
+              height: 50px;
+              width: 100px;
+            }
           }
         }
         li.tail-title {
-          p.inc {
-          }
         }
       }
     }
