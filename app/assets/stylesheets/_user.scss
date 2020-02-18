@@ -1,3 +1,6 @@
+.add_all{
+  color: #ea352d;
+}
 .signup-main {
   height: 100%;
   width:  100%;
@@ -27,6 +30,13 @@
   }
   &__form-group {
     margin-top: 32px;
+    #error_explanation{
+      color: #ea352d;
+      padding-bottom: 10px;
+    }
+  }
+  .add-all{
+    color: #ea352d;
   }
   &__label {
     font-weight: 600;
@@ -101,6 +111,7 @@
     width: 100%;
   }
 }
+
 
 .year {
   padding: 0 10px;
