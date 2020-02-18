@@ -5,7 +5,6 @@
   padding-right: 50px;
   background-color: rgb(245, 245, 245);
   &_upper {
-    height: 50%;
     width: 100%;
     padding-top: 100px;
     ul.products-box {
@@ -21,7 +20,7 @@
         height: 50px;
         width: 100%;
         background-color: #fff;
-        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
         transition: 0.5s;
         display: flex;
         .link_mypage {
@@ -338,7 +337,8 @@
   }
 }
 
-.fa{
+.icon-btn{
   line-height: 50px;
   padding-right: 10px;
+  color: #ccc;
 }
