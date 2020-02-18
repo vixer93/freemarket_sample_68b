@@ -1,0 +1,22 @@
+.main-sold-out
+  .sold-out
+    .sold-out__first
+      出品した商品
+    .sold-out__second
+      .sold-out__second--left
+        = link_to("#", class: "sold-out__second--left__btn") do
+          出品中
+      .sold-out__second--center
+        = link_to("#", class: "sold-out__second--center__btn") do
+          取引中
+      .sold-out__second--right
+        = link_to("#", class: "sold-out__second--right__btn") do
+          売却済み
+    .sold-out__third
+      売却済みの商品がありません
+    .sold-out__forth
+      = link_to("#", class: "left-btn") do
+        %i.left-btn.fa.fa-chevron-left
+      = link_to("#", class: "right-btn") do
+        %i.right-btn.fa.fa-chevron-right
+

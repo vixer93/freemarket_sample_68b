@@ -1,0 +1,19 @@
+.main-buy
+  .buy
+    .buy__first
+      出品した商品
+    .buy__second
+      .buy__second--left
+        = link_to("#", class: "buy__second--left__btn") do
+          取引中
+      .buy__second--right
+        = link_to("#", class: "buy__second--right__btn") do
+          過去の取引
+    .buy__third
+      取引中の商品がありません
+    .buy__forth
+      = link_to("#", class: "left-btn") do
+        %i.left-btn.fa.fa-chevron-left
+      = link_to("#", class: "right-btn") do
+        %i.right-btn.fa.fa-chevron-right
+
