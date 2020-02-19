@@ -1,0 +1,19 @@
+.main-bought
+  .bought
+    .bought__first
+      出品した商品
+    .bought__second
+      .bought__second--left
+        = link_to("#", class: "bought__second--left__btn") do
+          取引中
+      .bought__second--right
+        = link_to("#", class: "bought__second--right__btn") do
+          過去の取引
+    .bought__third
+      過去に取引した商品がありません
+    .bought__forth
+      = link_to("#", class: "left-btn") do
+        %i.left-btn.fa.fa-chevron-left
+      = link_to("#", class: "right-btn") do
+        %i.right-btn.fa.fa-chevron-right
+
