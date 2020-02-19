@@ -45,11 +45,10 @@ ActiveRecord::Schema.define(version: 2020_02_18_054937) do
     t.string "brand"
     t.integer "send_price", default: 0, null: false
     t.integer "ship_day", default: 0, null: false
-    t.bigint "buyer_id", null: false
+    t.integer "buyer_id", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buyer_id"], name: "fk_rails_d14ac84443"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -71,5 +70,4 @@ ActiveRecord::Schema.define(version: 2020_02_18_054937) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "products", "users", column: "buyer_id"
 end
