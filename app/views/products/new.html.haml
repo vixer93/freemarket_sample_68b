@@ -1,4 +1,4 @@
-= render 'shared/header'
+-# = render 'shared/header'
 .new-listing
   .new-listing__single-container
     .new-listing__single-head
@@ -20,6 +20,10 @@
               :preserve
                 ドラッグアンドドロップ
                 またはクリックしてファイルをアップロード
+      .new-listing__no-image
+        画像がありません
+
+              
     .new-listing__sell-content
       .new-listing__form-group
         %label
@@ -28,6 +32,8 @@
             .new-listing__form-require
               必須
           %input.input-default{:placeholder => "商品名（必須 40文字まで)", :value => "",size: 76}/
+      .new-listing__no-product
+        入力してください
       .new-listing__form-group
         %label
           .new-listing__sell-upload-head
@@ -35,6 +41,9 @@
             .new-listing__form-require
               必須
           %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+      .new-listing__no-product
+        入力してください
+      
     .new-listing__content-show
       %h3.show-sub-head
         商品の詳細
@@ -46,8 +55,7 @@
               .new-listing__form-require
                 必須
             .new-listing__select-wrap
-              -# %i.icon-arrow-bottom
-              //%i.fas.fa-chevron-down
+              //%i.fa.fa-chevron-down
               %select.select-default
                 %option{:value => ""} ---
                 %option{:value => "1"} レディース
@@ -63,7 +71,8 @@
                 %option{:value => "1027"} チケット
                 %option{:value => "1318"} 自動車・オートバイ
                 %option{:value => "10"} その他
-                
+              .new-listing__no-product
+                選択してください
         .new-listing__tk-form-group
           %label
           .new-listing__sell-upload-head
@@ -89,7 +98,8 @@
               %option{:value => "４"} やや傷や汚れあり
               %option{:value => "５"} 傷や汚れあり
               %option{:value => "6"} 全体的に状態が悪い
-    
+            .new-listing__no-product
+              選択してください
 
     .new-listing__content-show2
       %h3.show-sub-head
@@ -110,7 +120,8 @@
                 %option{:value => ""} 選択してください
                 %option{:value => "2"} 送料込み（出品者負担）
                 %option{:value => "１"} 着払い（購入者負担）
-                
+              .new-listing__no-product
+                選択してください
 
         .new-listing__tk-form-group
           %label
@@ -128,6 +139,8 @@
               %option{:value => "４"} やや傷や汚れあり
               %option{:value => "５"} 傷や汚れあり
               %option{:value => "6"} 全体的に状態が悪い
+            .new-listing__no-product
+              選択してください
         
         .new-listing__tk-form-group
           %label
@@ -142,7 +155,8 @@
               %option{:value => "1"} 1~2日で配送
               %option{:value => "２"} 2~3日で配送
               %option{:value => "３"} 4~7日で配送
-
+            .new-listing__no-product
+              選択してください
     .new-listing__settlement
       %p.tk-value
         価格（¥300~9,999,999)
@@ -160,8 +174,33 @@
           .new-listing__enter-price
             .new-listing__enter-price2
               %input.tk-price{:autocomplete => "off", :name => "price", :placeholder => "0", :type => "number", :value => ""}/
+              .new-listing__no-product2
+                300以上9999999以下で入力してください
+        .new-listing__commission
+          .new-listing__commision-box
+            .new_listing__commission-font{"data-test" => "fee-label"}
+              %div 
+                販売手数料（10%）
+            %span.money{"data-test" => "fee-value"} 
+              —
+        .new-listing__commission2
+          .new-listing__commision-box
+            .new_listing__commission-font{"data-test" => "fee-label"}
+              %div 
+                販売利益
+            %span.money{"data-test" => "fee-value"} 
+              —
+      .new-listing__send-boxes
+        .new-listing__send-box
+          %buttun.send-btn{:tabindex => "0", :type => "submit"} 
+            出品する
+          %a.return-btn{:href => "#"} 
+            もどる
+      %p.note
+        禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。
 
-= render 'shared/footer'
+
+-# = render 'shared/footer'
 
 
 
