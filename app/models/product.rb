@@ -9,4 +9,13 @@ class Product < ApplicationRecord
   enum status:      { "出品中": 0, "売却済": 1 }
   enum send_price:  { "出品者負担": 0, "購入者負担": 1 }
   enum ship_day:    { "1~2日で発送": 0, "2~3日で発送": 1, "4~7日で発送": 2 }
+  with_options presence: true do
+    validates :name
+    validates :description
+    validates :price
+    validates :condition
+    validates :status
+    validates :send_price
+    validates :ship_day
+  end
 end

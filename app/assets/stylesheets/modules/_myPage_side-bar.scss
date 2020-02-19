@@ -1,0 +1,339 @@
+.side-bar {
+  height: 100vh;
+  width: 30vw;
+  padding-left: 100px;
+  padding-right: 50px;
+  background-color: rgb(245, 245, 245);
+  &_upper {
+    height: 50%;
+    width: 100%;
+    padding-top: 100px;
+    ul.products-box {
+      height: 90%;
+      width: 80%;
+      float: right;
+      list-style: none;
+      p {
+        font-weight: bold;
+        font-size: 25px;
+      }
+      li.exhibition {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        transition: 0.5s;
+        .link_exhibition {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+        .icon {
+          line-height: 1px;
+          font-weight: 400px;
+          color: black;
+        }
+      }
+      li.exhibition:hover {
+        height: 50px;
+        width: 100%;
+        background-color: rgb(229, 235, 238);
+        .link_exhibition {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 210px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.exhibited {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_exhibited {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.exhibited:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        .link_exhibited {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 110px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.transaction {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_transaction {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.transaction:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        .link_transaction {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 110px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.sold {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_sold {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.sold:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        transition: 0.5s;
+        .link_sold {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 90px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.purchase {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_purchase {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.purchase:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        .link_purchase {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 110px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.purchased {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_purchased {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.purchased:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        .link_purchased {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 75px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+    }
+  }
+  &_lower {
+    height: 50%;
+    width: 100%;
+    ul.mypages-box {
+      height: 52%;
+      width: 80%;
+      float: right;
+      list-style: none;
+      p {
+        font-weight: bold;
+        font-size: 25px;
+      }
+      li.mypage {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_mypage {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.mypage:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        .link_mypage {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 190px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.card {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_card {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.card:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        transition: 0.5s;
+        .link_card {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 190px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.logout {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        transition: 0.5s;
+        .link_logout {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          padding: 20px 0px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+      li.logout:hover {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: rgb(229, 235, 238);
+        transition: 0.5s;
+        .link_logout {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: large;
+          padding: 20px 190px 20px 0px;
+          margin-left: 30px;
+          line-height: 50px
+        }
+      }
+    }
+  }
+}
