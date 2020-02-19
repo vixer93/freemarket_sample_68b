@@ -44,15 +44,13 @@
 |brand|String|
 |send_price|Integer|null: false(enum)|
 |ship_day|Integer|null: false（enum）|
-|user_id|Integer|null: false, foreign_key: true|
-|ship_from_id|Integer|null: false,foreign_key: true|
+|buyer_id|Integer|null: false|
 |category_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - has_many :product_images,dependent:delete_all
 - has_one  :contract_history,dependent:delete
 - belongs_to :category　
-- belongs_to :ship_from
 - belongs_to :user
 
 
@@ -62,7 +60,7 @@
 |------|----|-------|
 |user_id|Integer|null:false,foreign_key: true|
 |postal_code|String|null: false, format: {with:/\A\d{3}[_]\d{4}\z/}|
-|prefectures|String|null: faise|
+|prefecture_id|String|null: faise, foreign_key: true|
 |municipality|String|null: faise|
 |block_number|String|null: faise|
 |apartment_name|String|
@@ -76,22 +74,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|Integer|null: false,foreign_key: true|
-|customer_id|String|null: false|
-|card_id|String|null: false|
+|customer_id_token|String|null: false|
+|card_id_token|String|null: false|
 
 ### Association
 - belongs_to :user
-
-
-
-## ship_fromテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|String|null: false|null: false｜
-
-### Association
-- has_many :products
-
 
 
 
@@ -99,7 +86,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |product_id|Integer|null: false,foreign_key:true|
-|user_id|Integer|null: false,foreign_key: true|
+|buyer_id|Integer|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :product
