@@ -2,96 +2,97 @@
   display: flex;
   background: #f5f5f5;
   margin: 40px auto 0;
-
-  .main-buy{
-    width: 80%;
-    height: 100vh;
+  .margin-top{
     margin-top: 100px;
-    .buy{
-      max-width: 700px;
-      min-height: 466px;
-      &__first{
-        height: 72px;
-        background: #fafafa;
-        padding: 0 16px;
-        font-size: 16px;
-        line-height: 72px;
-        font-weight: bold;
-      }
-      &__second{
-        display: flex;
-        height: 74px;
-        line-height: 74px;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        background: #eee;
-        a{
-          text-decoration: none;
-          color: black;
-        }
-        a:hover{
-        }
-        &--left{
-          width: 50%;
-          border-top: red solid;
+    .main-buy{
+      width: 80%;
+      height: 100vh;
+      .buy{
+        min-width: 700px;
+        min-height: 466px;
+        &__first{
+          height: 72px;
           background: #fafafa;
+          padding: 0 16px;
+          font-size: 16px;
+          line-height: 72px;
+          font-weight: bold;
         }
-        &--left:hover{
-          color: rgba(73, 73, 73, 0.5);
-          opacity: 0.6;
-        }
-        &--right{
-          width: 50%;
-        }
-        &--right:hover{
-          color: rgba(73, 73, 73, 0.5);
-          opacity: 0.6;
-        }
-      }
-      &__third{
-        height: 236px;
-        background: #fafafa;
-        color: #cccccc;
-        text-align: center;
-        padding: 160px 0 60px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-      &__forth{
-        margin-top: 40px;
-        display: flex;
-        position: relative;
-        .left-btn{
-          color: #333;
-          width: 42px;
-          height: 42px;
-          display: block;
-          text-decoration: none;
+        &__second{
+          display: flex;
+          height: 74px;
+          line-height: 74px;
+          font-size: 16px;
+          font-weight: bold;
           text-align: center;
-          line-height: 42px;
-          background: #fff;
-          border: solid 0.1px #ccc;
-        }
-        .left-btn:hover{
-          opacity: 0.8;
-        }
-        .right-btn{
-          position: absolute;
-          right: 0;
-          color: #333;
-          width: 42px;
-          height: 42px;
-          display: block;
           text-decoration: none;
-          text-align: center;
-          line-height: 42px;
-          background: #fff;
-          border: solid 0.1px #ccc;
+          background: #eee;
+          a{
+            text-decoration: none;
+            color: black;
+          }
+          a:hover{
+          }
+          &--left{
+            width: 50%;
+            border-top: red solid;
+            background: #fafafa;
+          }
+          &--left:hover{
+            color: rgba(73, 73, 73, 0.5);
+            opacity: 0.6;
+          }
+          &--right{
+            width: 50%;
+          }
+          &--right:hover{
+            color: rgba(73, 73, 73, 0.5);
+            opacity: 0.6;
+          }
         }
-        .right-btn:hover{
-          opacity: 0.8;
+        &__third{
+          height: 236px;
+          background: #fafafa;
+          color: #cccccc;
+          text-align: center;
+          padding: 160px 0 60px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__forth{
+          margin-top: 40px;
+          display: flex;
+          position: relative;
+          .left-btn{
+            color: #333;
+            width: 42px;
+            height: 42px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 42px;
+            background: #fff;
+            border: solid 0.1px #ccc;
+          }
+          .left-btn:hover{
+            opacity: 0.8;
+          }
+          .right-btn{
+            position: absolute;
+            right: 0;
+            color: #333;
+            width: 42px;
+            height: 42px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 42px;
+            background: #fff;
+            border: solid 0.1px #ccc;
+          }
+          .right-btn:hover{
+            opacity: 0.8;
+          }
         }
       }
     }
