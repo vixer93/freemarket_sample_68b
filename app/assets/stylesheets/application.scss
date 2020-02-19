@@ -1,4 +1,6 @@
 @import "./reset";
+@import "font-awesome";
+@import "font-awesome-sprockets";
 @import "config/colors";
 @import "modules/displayBtn";
 @import "modules/header";
@@ -11,3 +13,6 @@
 @import "modules/appBanner";
 @import "modules/footer";
 @import "products";
+@import "modules/user";
+@import "modules/myPage_side-bar";
+@import "modules/login";
