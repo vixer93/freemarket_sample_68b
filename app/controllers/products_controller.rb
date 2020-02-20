@@ -6,5 +6,10 @@ class ProductsController < ApplicationController
 
   def show
   end
+  
 
+  protected
+  def product_params
+    params.rquire(:product).permit()
+  end
 end
