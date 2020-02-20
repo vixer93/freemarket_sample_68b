@@ -1,0 +1,24 @@
+.content__title
+  %h2 支払い方法
+.content__credit-cards
+  %h3 クレジットカード一覧
+  - if @card.present?
+    %ul.content__credit-cards__list
+      %li
+        = form_with url: card_path(@card.id), method: :delete, local: true, id: 'charge-form' do |f|
+          %figure
+            -# = image_tag "credit-cards/#{@card_src}", width: '26', height: '20', alt: @card_brand, id: "card_image"
+          .content__credit-cards__list--pay-num
+            = "**** **** **** " + @card_information.last4
+          .content__credit-cards__list--pay-num
+            - exp_month = @card_information.exp_month.to_s
+            - exp_year = @card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
+          %input{type: "hidden", name: "card_id", value: ""}
+          = f.submit "削除する", {class: "content__credit-cards__list__remove"}
+          - if flash[:notice]
+            .alert.alert-success
+            = flash[:notice]
+          - if flash[:alert]
+            .alert.alert-dange
+            = flash[:alert]

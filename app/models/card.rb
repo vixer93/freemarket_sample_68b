@@ -1,5 +1,4 @@
 class Card < ApplicationRecord
   belongs_to :user
-
-  validates :customer_id_token, :card_id_token, presence: true
+  validates :customer_id, :card_id, presence: true
 end

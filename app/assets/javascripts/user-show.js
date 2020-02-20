@@ -1,7 +1,6 @@
 window.addEventListener("load", function(){
   $(function(){
     $(".mypage").hover(function(){
-      console.log("hello")
       $(".mypage-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.mypage-btn').animate({marginRight : ''}, 100)
@@ -13,7 +12,6 @@ window.addEventListener("load", function(){
     });
 
     $(".exhibition").hover(function(){
-      console.log("hello")
       $(".exhibition-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.exhibition-btn').animate({marginRight : ''}, 100)
@@ -25,7 +23,6 @@ window.addEventListener("load", function(){
     });
 
     $(".exhibited").hover(function(){
-      console.log("hello")
       $(".exhibited-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.exhibited-btn').animate({marginRight : ''}, 100)
@@ -37,7 +34,6 @@ window.addEventListener("load", function(){
     });
 
     $(".transaction").hover(function(){
-      console.log("hello")
       $(".transaction-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.transaction-btn').animate({marginRight : ''}, 100)
@@ -49,7 +45,6 @@ window.addEventListener("load", function(){
     });
 
     $(".sold").hover(function(){
-      console.log("hello")
       $(".sold-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.sold-btn').animate({marginRight : ''}, 100)
@@ -61,7 +56,6 @@ window.addEventListener("load", function(){
     });
 
     $(".purchase").hover(function(){
-      console.log("hello")
       $(".purchase-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.purchase-btn').animate({marginRight : ''}, 100)
@@ -73,7 +67,6 @@ window.addEventListener("load", function(){
     });
 
     $(".purchased").hover(function(){
-      console.log("hello")
       $(".purchased-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.purchased-btn').animate({marginRight : ''}, 100)
@@ -85,7 +78,6 @@ window.addEventListener("load", function(){
     });
 
     $(".card").hover(function(){
-      console.log("hello")
       $(".card-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.card-btn').animate({marginRight : ''}, 100)
@@ -97,7 +89,6 @@ window.addEventListener("load", function(){
     });
 
     $(".logout").hover(function(){
-      console.log("hello")
       $(".logout-btn").animate({marginRight : '-2px'}, 100)
     },function(){
       $('.logout-btn').animate({marginRight : ''}, 100)
