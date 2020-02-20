@@ -327,8 +327,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ancestry
   active_hash
+  ancestry
   bootsnap (>= 1.1.0)
   byebug
   capistrano
