@@ -13,9 +13,27 @@ body{
   color: black;
 }
 
-.categoryBtn:hover,.brandBtn:hover {
+.categoryBtn:hover,.brandBtn:hover{
   background-position: -100% 0;
   color: orange;
+}
+
+.category-link{
+  color: $black;
+  text-decoration: none;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+  display: block;
+  width: 240px;
+  padding: 3px 8px 3px 5px;
+  border-bottom: 1px solid #f8f8f8;
+  &:hover{
+    background-position: -100% 0;
+    color: orange; 
+  }
 }
 
 
@@ -33,7 +51,7 @@ body{
       padding-top: 15px;
       padding-bottom: 10px;
       &--icon {
-        background-image: url(logo.png);
+        background-image: image-url("logo.png");
         height: 40px;
         width: 140px;
         background-size: cover;
@@ -51,6 +69,49 @@ body{
 
         &--category {
           padding-right: 30px;
+          position: relative;
+          &:hover > .firstMenu{
+            // opacity: 1;
+            // visibility: visible;
+          }
+          .firstMenu{
+            // opacity: 0;
+            // visibility: hidden;
+            position: absolute;
+            z-index: 2;
+            background-color: $white;
+              &__parent{
+                display: flex;
+                width: 240px;
+                .secondMenu{
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  background-color: $white;
+                  
+                  &__second{
+
+                    .grandchildren{
+                      position: relative;
+                      display: flex;
+                      flex-direction: column;
+                      background-color: $white;
+                      &__third{
+
+                      }
+                    }
+
+                    
+                  }
+                }
+              }
+              &__item{
+                position: relative;
+                
+              }
+            
+            
+          }
         }
         &--brand {
           padding-right: 30px;
