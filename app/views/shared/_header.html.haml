@@ -6,13 +6,53 @@
     .header__box__sub
       .header__box__sub__left
         .header__box__sub__left--category
-          = link_to "#", class: "categoryBtn" do
+<<<<<<< HEAD
+          = link_to "#", class: "categoryBtn", id: "left-category" do
             = "カテゴリー"
+          .hideTree{:id => "hideTree"}
+            %ul.hideTree__parent{ :id => "hideTree-parent"}
+              - @big_categories.each do |big_category|
+                %li.hideTree__parent--item
+                  = link_to "#", class: "item__link", id: "category-#{big_category.id}" do
+                    = big_category.name
+            %ul.hideTree__children
+              - @middle_categories.each do |middle_category|
+                %li.hideTree__children--item
+                  = link_to "#", class: "item__link", id: "category-#{middle_category.id}" do
+                    = middle_category.name
+            %ul.hideTree__grandchildren
+              - @small_categories.each do |small_category|
+                %li.hideTree__children--item
+                  = link_to "#", class: "item__link", id: "category-#{small_category.id}" do
+                    = small_category.name
+=======
+          = link_to "#", class: "categoryBtn", id: "category-link" do
+            = "カテゴリー"
+          .visibleTree
+            %ul.firstMenu__parents
+              - @parent.each do |parent|
+                %li.firstMenu__parents__parent
+                  = link_to "#{parent.name}", "#", class: "item-link" 
+
+                  %ul.secondMenu__children
+                    - parent.children.each do |child|
+                      %li.secondMenu__children__child
+                        = link_to "#{child.name}", "#", class: "item-link" 
+
+                        %ul.thirdMenu__grandchildren
+                          - child.children.each do |grandchildren|
+                            %li.thirdMenu__grandchildren__grandchild
+                              = link_to "#{grandchildren.name}", "#", class: "item-link" 
+>>>>>>> 4f31cf53c7e968a713132a8a5e5f716c27c3018f
         .header__box__sub__left--brand
           = link_to "#", class: "brandBtn" do
             = "ブランド"
       .header__box__sub__right
-        = link_to '#', class: "header__box__sub__right--log-in" do
-          ログイン
-        = link_to '#', class: "header__box__sub__right--register-user" do
-          新規会員登録
+        - if current_user.nil?
+          = link_to new_user_session_path, class: "header__box__sub__right--log-in" do
+            ログイン
+          = link_to new_user_registration_path, class: "header__box__sub__right--register-user" do
+            新規会員登録
+        - else
+          = link_to user_path(current_user), class:"header__box__sub__right--log-out" do
+            マイページ

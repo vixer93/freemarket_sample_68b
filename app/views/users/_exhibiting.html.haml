@@ -1,0 +1,22 @@
+.main-exhibiting
+  .exhibiting
+    .exhibiting__first
+      出品した商品
+    .exhibiting__second
+      .exhibiting__second--left
+        = link_to("#", class: "exhibiting__second--left__btn") do
+          出品中
+      .exhibiting__second--center
+        = link_to("#", class: "exhibiting__second--center__btn") do
+          取引中
+      .exhibiting__second--right
+        = link_to("#", class: "exhibiting__second--right__btn") do
+          売却済み
+    .exhibiting__third
+      出品中の商品がありません
+    .exhibiting__forth
+      = link_to("#", class: "left-btn") do
+        %i.left-btn.fa.fa-chevron-left
+      = link_to("#", class: "right-btn") do
+        %i.right-btn.fa.fa-chevron-right
+

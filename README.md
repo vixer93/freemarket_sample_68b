@@ -60,7 +60,7 @@
 |------|----|-------|
 |user_id|Integer|null:false,foreign_key: true|
 |postal_code|String|null: false, format: {with:/\A\d{3}[_]\d{4}\z/}|
-|prefectures|String|null: faise|
+|prefecture_id|String|null: faise, foreign_key: true|
 |municipality|String|null: faise|
 |block_number|String|null: faise|
 |apartment_name|String|
