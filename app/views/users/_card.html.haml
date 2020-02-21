@@ -7,9 +7,10 @@
         クレジットカード一覧
     .main-card__bottom--second
       .main-card__bottom--second__credit-btn
-        = link_to("#", class: "credit-btn") do
-          %i.credit-btn__btn.fa.fa-credit-card
-          クレジットカードを追加する
+        = form_with url: new_card_path do
+          = link_to(new_card_path, class: "credit-btn") do
+            %i.credit-btn__btn.fa.fa-credit-card
+            クレジットカードを追加する
     .main-card__bottom--third
       = link_to("#", class: "how-pay") do
         支払い方法について
