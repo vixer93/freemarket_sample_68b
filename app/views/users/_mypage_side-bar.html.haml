@@ -2,7 +2,7 @@
   .side-bar_upper
     %ul.products-box
       %li.mypage
-        = link_to("#" , class: "link_mypage") do
+        = link_to(users_path(current_user) , class: "link_mypage") do
           マイページ
         %i.mypage-btn.fa.fa-chevron-right.icon-btn
       %li.exhibition.icon-view
@@ -32,7 +32,7 @@
   .side-bar_lower
     %ul.mypages-box
       %li.card.icon-view
-        = link_to(root_path, class: "link_card") do
+        = link_to(user_path(current_user), class: "link_card") do
           支払い方法
         %i.card-btn.fa.fa-chevron-right.icon-btn
       %li.logout.icon-view
