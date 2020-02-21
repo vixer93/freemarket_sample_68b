@@ -16,12 +16,12 @@
   background-color: gray;
   padding: 100px 40px;
   position: relative;
-  background-image: url(bg-appBanner-pict.jpg);
+  background-image: image-url("bg-appBanner-pict.jpg");
   background-size: cover;
   background-position: center;
   &__inner{
     text-align: center;
-    color: $white;
+    color: white;
     &--title{
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 24px;

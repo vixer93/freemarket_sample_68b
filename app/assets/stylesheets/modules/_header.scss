@@ -10,7 +10,7 @@ body{
 
 .categoryBtn,.brandBtn {
   text-decoration: none;
-  color: $black;
+  color: black;
 }
 
 .categoryBtn:hover,.brandBtn:hover{
@@ -50,7 +50,7 @@ body{
       padding-top: 15px;
       padding-bottom: 10px;
       &--icon {
-        background-image: url(logo.png);
+        background-image: image-url("logo.png");
         height: 40px;
         width: 140px;
         background-size: cover;
@@ -140,14 +140,31 @@ body{
       &__right {
         font-size: 14px;
         display: block;
+        &--log-out{
+          text-decoration: none;
+          color: black;
+        }
+        &--log-out:hover{
+          text-decoration: none;
+          color:red;
+        }
         &--log-in{
           text-decoration: none;
-          color: $black;
+          color: black;
+        }
+        &--log-in:hover{
+          text-decoration: none;
+          color: red;
         }
         &--register-user {
           padding-left: 12px;
           text-decoration: none;
-          color: $black;
+          color: black;
+        }
+        &--register-user:hover {
+          padding-left: 12px;
+          text-decoration: none;
+          color: red;
         }
       }
     }
