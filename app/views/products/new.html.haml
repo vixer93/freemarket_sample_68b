@@ -1,4 +1,3 @@
--# = render 'shared/header'
 .new-listing
   .new-listing__single-container
     = form_with(model: @product, local: true) do |f|
@@ -13,11 +12,11 @@
         .new-listing__p
           最大10枚までアップロードできます
         .new-listing__sell-dropbox
-          = f.fields_for :image do |i|
+          = f.fields_for :images do |i|
             .new-listing__sell-upload-items-container
             %label
               .new-listing__sell-upload-drop-box
-                = i.file_field :file, class: "sell-upload-drop-file"
+                = i.file_field images_attributes: [:name], class: "sell-upload-drop-file"
                 %pre.visible-pc
                   :preserve
                     ドラッグアンドドロップ
@@ -28,20 +27,18 @@
                 
       .new-listing__sell-content
         .new-listing__form-group
-          =form_with model: @product do |f| 
-            .new-listing__sell-upload-head
-              = f.label :name,"商品名" 
-              %span.new-listing__form-require 
-                必須
-            %input.input-default{:placeholder => "商品名（必須 40文字まで)", :value => "",size: 76}/
+          .new-listing__sell-upload-head
+            = f.label :name,"商品名" 
+            %span.new-listing__form-require 
+              必須
+          = f.text_field :name ,class: "input-default" ,placeholder: "商品名（必須 40文字まで)"
         .new-listing__no-product.no-product-name
         .new-listing__form-group
-          =form_with model: @product do |f| 
-            .new-listing__sell-upload-head
-              = f.label :description, "商品の説明"
-              %span.new-listing__form-require
-                必須
-            %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+          .new-listing__sell-upload-head
+            = f.label :description, "商品の説明"
+            %span.new-listing__form-require
+              必須
+          = f.text_area :description, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
         .new-listing__no-product.no-product2
         
       .new-listing__content-show
@@ -54,50 +51,26 @@
               %span.new-listing__form-require
                 必須
             .new-listing__select-wrap
-              //%i.fa.fa-chevron-down
-              %select.select-default.default01
-                %option{:value => ""} ---
-                %option{:value => "1"} レディース
-                %option{:value => "２"} メンズ
-                %option{:value => "３"} ベビー・キッズ
-                %option{:value => "４"} インテリア・住まい・子供
-                %option{:value => "５"} 本・音楽・ゲーム
-                %option{:value => "1328"} おもちゃ・ホビー・グッズ
-                %option{:value => "6"} コスメ・香水・美容
-                %option{:value => "7"} 家電・スマホ・カメラ
-                %option{:value => "8"} スポーツ・レジャー
-                %option{:value => "9"} ハンドメイド
-                %option{:value => "1027"} チケット
-                %option{:value => "1318"} 自動車・オートバイ
-                %option{:value => "10"} その他
+              -# = f.select :category, [["メンズ",1]]
               .new-listing__no-product
                 選択してください
           .new-listing__tk-form-group
-            =form_with model: @product do |f| 
-              .new-listing__sell-upload-head
-                = f.label :ブランド
-                %span.new-listing__form-require2
-                  任意
-              .new-listing__select-wrap
-                %input.brand-select{:autocomplete => "off", :name => "brandName", :placeholder => "例）シャネル", :type => "text", :value => ""}/
+            .new-listing__sell-upload-head
+              = f.label :ブランド
+              %span.new-listing__form-require2
+                任意
+            .new-listing__select-wrap
+              = f.text_field :brand, class: "brand-select", placeholder: "例）シャネル"
 
           .new-listing__tk-form-group
-            =form_with model: @product do |f| 
-              .new-listing__sell-upload-head
-                = f.label :status,"商品の状態"
-                %span.new-listing__form-require
-                  必須
-              .new-listing__select-wrap
-                %i.icon-arrow-bottom
-                %select.select-default.default02
-                  %option{:value => ""} ---
-                  %option{:value => "0"} 新品・未使用
-                  %option{:value => "1"} 未使用に近い
-                  %option{:value => "2"} 目立った傷や汚れなし
-                  %option{:value => "3"} やや傷や汚れあり
-                  %option{:value => "4"} 傷や汚れあり
-                  %option{:value => "5"} 全体的に状態が悪い
-                .new-listing__no-product.no-product4
+            .new-listing__sell-upload-head
+              = f.label :status,"商品の状態"
+              %span.new-listing__form-require
+                必須
+            .new-listing__select-wrap
+              %i.icon-arrow-bottom
+                = f.select :condition, [["新品/未使用",0],["未使用に近い",1],["目立った傷や汚れなし",2],["やや傷や汚れなし",3],["傷や汚れあり",4],["全体的に状態が悪い",5]], prompt: "---", class: "select-default"
+              .new-listing__no-product.no-product4
                   
 
       .new-listing__content-show2
@@ -107,17 +80,13 @@
           ?
         .new-listing__show-form-box
           .new-listing__tk-form-group
-            =form_with model: @product do |f| 
-              .new-listing__sell-upload-head
-                = f.label :send_price,"配送量の負担"
-                %apan.new-listing__form-require
-                  必須
-              .new-listing__select-wrap
-                %select.select-default.default03
-                  %option{:value => ""} 選択してください
-                  %option{:value => "2"} 送料込み（出品者負担）
-                  %option{:value => "１"} 着払い（購入者負担）
-                .new-listing__no-product.no-product5
+            .new-listing__sell-upload-head
+              = f.label :send_price,"配送料の負担"
+              %apan.new-listing__form-require
+                必須
+            .new-listing__select-wrap
+              = f.select :send_price, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select-default"
+              .new-listing__no-product.no-product5
                   
 
           .new-listing__tk-form-group
@@ -127,30 +96,18 @@
                 必須
             .new-listing__select-wrap
               %i.icon-arrow-bottom
-              %select.select-default
-                %option{:value => ""} 選択してください
-                %option{:value => "1"} 北海道
-                %option{:value => "２"} 青森県
-                %option{:value => "３"} 岩手県
-                %option{:value => "４"} やや傷や汚れあり
-                %option{:value => "５"} 傷や汚れあり
-                %option{:value => "6"} 全体的に状態が悪い
+                = f.collection_select(:prefecture_id, Prefecture.all, :id, :name, prompt: "---")
               .new-listing__no-product
                 選択してください
           
           .new-listing__tk-form-group
-            =form_with model: @product do |f| 
-              .new-listing__sell-upload-head
-                = f.label :ship_day,"発送までの日数"
-                %span.new-listing__form-require
-                  必須
-              .new-listing__select-wrap
-                %select.select-default.default05
-                  %option{:value => ""} 選択してください
-                  %option{:value => "1"} 1~2日で配送
-                  %option{:value => "２"} 2~3日で配送
-                  %option{:value => "３"} 4~7日で配送
-                .new-listing__no-product.no-product7
+            .new-listing__sell-upload-head
+              = f.label :ship_day,"発送までの日数"
+              %span.new-listing__form-require
+                必須
+            .new-listing__select-wrap
+              = f.select :ship_day, [["1~2日で発送", 0], ["2~3日で発送", 1], ["4~7日で発送", 2]], class: "select", prompt: "---"
+              .new-listing__no-product.no-product7
                   
       .new-listing__settlement
         %p.tk-value
@@ -159,16 +116,15 @@
             ?
         .new-listing__tk-selling-price
           .new-listing__input-price
-            =form_with model: @product do |f| 
-              .new-listing__sell-upload-head2
-                = f.label :price,"販売価格"
-                %span.new-listing__form-require
-                  必須
+            .new-listing__sell-upload-head2
+              = f.label :price,"販売価格"
+              %span.new-listing__form-require
+                必須
             %span.doll-mark
               ¥
             .new-listing__enter-price
               .new-listing__enter-price2
-                %input.tk-price{:autocomplete => "off", :name => "price", :placeholder => "0", :type => "number", :value => ""}/
+                = f.number_field :price, placeholder: "0", class: "tk-price"
                 .new-listing__no-product.no-product2
                   
           .new-listing__commission
@@ -187,15 +143,8 @@
                 —
         .new-listing__send-boxes
           .new-listing__send-box
-            %buttun.send-btn{:tabindex => "0", :type => "submit"} 
-              出品する
+            = f.submit "出品する", class: "send-btn"
             %a.return-btn{:href => "#"} 
               もどる
         %p.note
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。
-
-
--# = render 'shared/footer'
-
-
-

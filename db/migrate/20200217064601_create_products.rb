@@ -11,6 +11,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer    :ship_day,    null: false, default: 0
       t.bigint     :user_id,    null: false
       t.integer    :category_id, null: false
+      t.integer    :prefecture_id, null: false
       t.timestamps
     end
     add_foreign_key :products, :users, column: :user_id
