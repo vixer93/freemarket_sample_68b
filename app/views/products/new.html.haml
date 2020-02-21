@@ -68,8 +68,8 @@
               %option{:value => "1027"} チケット
               %option{:value => "1318"} 自動車・オートバイ
               %option{:value => "10"} その他
-            .new-listing__no-product
-              選択してください
+            .new-listing__no-product.no-product3
+              
         .new-listing__tk-form-group
           =form_with model: @product do |f| 
             .new-listing__sell-upload-head
@@ -119,22 +119,16 @@
                 
 
         .new-listing__tk-form-group
-          .new-listing__sell-upload-head
-            発送元の地域
-            .new-listing__form-require
-              必須
-          .new-listing__select-wrap
-            %i.icon-arrow-bottom
-            %select.select-default
-              %option{:value => ""} 選択してください
-              %option{:value => "1"} 北海道
-              %option{:value => "２"} 青森県
-              %option{:value => "３"} 岩手県
-              %option{:value => "４"} やや傷や汚れあり
-              %option{:value => "５"} 傷や汚れあり
-              %option{:value => "6"} 全体的に状態が悪い
-            .new-listing__no-product
-              選択してください
+          =form_with model: @product do |f| 
+            .new-listing__sell-upload-head
+              = f.label :shipping,"発送元の地域"
+              %span.new-listing__form-require
+                必須
+            .new-listing__select-wrap
+              .select-default.default04                
+              = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "--"}, {class: "signup-main__prefecture"}                 
+              .new-listing__no-product.no-product6
+              
         
         .new-listing__tk-form-group
           =form_with model: @product do |f| 
