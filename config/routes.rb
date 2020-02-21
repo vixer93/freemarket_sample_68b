@@ -9,6 +9,14 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
 
-  resources :users, only: [:index, :show]
+  resources :users do
+    member do
+      get 'exhibiting'
+      get 'buy'
+      get 'bought'
+      get 'sold'
+      get 'transaction'
+    end
+  end
   resources :cards, only: [:new, :create, :index, :destroy]
 end
