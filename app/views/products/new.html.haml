@@ -16,7 +16,7 @@
             .new-listing__sell-upload-items-container
             %label
               .new-listing__sell-upload-drop-box
-                = i.file_field images_attributes: [:name], class: "sell-upload-drop-file"
+                = i.file_field :name, class: "sell-upload-drop-file"
                 %pre.visible-pc
                   :preserve
                     ドラッグアンドドロップ
