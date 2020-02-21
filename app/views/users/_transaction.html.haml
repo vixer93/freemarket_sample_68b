@@ -1,0 +1,21 @@
+.main-transaction
+  .transaction
+    .transaction__first
+      出品した商品
+    .transaction__second
+      .transaction__second--left
+        = link_to("#", class: "transaction__second--left__btn") do
+          出品中
+      .transaction__second--center
+        = link_to("#", class: "transaction__second--center__btn") do
+          取引中
+      .transaction__second--right
+        = link_to("#", class: "transaction__second--right__btn") do
+          売却済み
+    .transaction__third
+      取引中の商品がありません
+    .transaction__forth
+      = link_to("#", class: "left-btn") do
+        %i.left-btn.fa.fa-chevron-left
+      = link_to("#", class: "right-btn") do
+        %i.right-btn.fa.fa-chevron-right

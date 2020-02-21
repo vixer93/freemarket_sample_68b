@@ -49,5 +49,5 @@
           = link_to new_user_registration_path, class: "header__box__sub__right--register-user" do
             新規会員登録
         - else
-          = link_to destroy_user_session_path, class:"header__box__sub__right--log-out", method: "delete" do
-            ログアウト
+          = link_to user_path(current_user), class:"header__box__sub__right--log-out" do
+            マイページ

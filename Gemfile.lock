@@ -110,6 +110,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    erb2haml (0.1.5)
+      html2haml
     erubi (1.9.0)
     erubis (2.7.0)
     excon (0.72.0)
@@ -136,6 +138,8 @@ GEM
     fog-xml (0.1.3)
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     font-awesome-sass (5.12.0)
       sassc (>= 1.11)
     formatador (0.2.5)
@@ -341,8 +345,10 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  erb2haml
   factory_bot_rails
   fog-aws
+  font-awesome-rails
   font-awesome-sass
   haml-rails
   jbuilder (~> 2.5)
