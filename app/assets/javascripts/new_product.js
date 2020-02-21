@@ -158,22 +158,5 @@ window.addEventListener("load", function(){
         $('.no-product2').text('')
       }
     });
-
-
-
-    
-//
-    $( '.tk-price' ).on('change',function(){
-      let price = $(this).val();
-      if( price == 0){
-        $('.tk-price').css('border-color','red')
-        $('.no-product2').text('300以上9999999以下で入力してください')
-      }else{
-        $('.tk-price').css('border-color','')
-        $('.no-product2').text('')
-      }
-    });
-
-
   });
 });
