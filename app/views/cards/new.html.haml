@@ -1,25 +1,3 @@
-.content__title
-  %h2 クレジットカード情報入力
-.content__credit-card
-  .content__credit-card__inner
-    = form_with url: cards_path, method: :post, html: { name: "inputForm" } do |f|
-      = f.label :カード番号, class: 'label'
-      %span 必須
-      = f.text_field :card_number, type: 'text', class: 'input-number', placeholder: '半角数字のみ', maxlength: "16"
-      .cards-expire
-        = f.label :有効期限, class: 'label'
-        %span 必須
-        %br
-        .cards-expire__wrap
-          = f.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{} , class: 'input-expire'
-          %span.expire-text 月
-          %br
-        .cards-expire__wrap
-          = f.select :exp_year, [["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{} , class: 'input-expire'
-          %span.expire-text 年
-      .cards-expire
-        = f.label :card_number,"セキュリティコード", class: 'label'
-        %span 必須
-        = f.text_field :cvc, type: 'text', class: 'input-number', placeholder: 'カード背面4桁もしくは3桁の番号', maxlength: "4"
-      .content-bottom#card_token
-        = f.submit '追加する', class: 'content-bottom--add-btn', id: 'token_submit'
+.card-all
+  = render "users/mypage_side-bar"
+  = render "card-make"

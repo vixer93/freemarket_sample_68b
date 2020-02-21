@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   require "payjp"
+  require_relative './../commonclass/payjp.rb'
   before_action :set_card
 
   def index
@@ -23,17 +24,6 @@ class CardsController < ApplicationController
       when "Discover"
         @card_src = "discover.gif"
       end
-    end
-  end
-
-  def destroy
-    Payjp.api_key = "sk_test_85fe27c2e2a8ea13cd45a930"
-    customer = Payjp::Customer.retrieve(@card.customer_id)
-    customer.delete
-    if @card.destroy
-      redirect_to action: "index", notice: "削除しました"
-    else
-      redirect_to action: "index", alert: "削除できませんでした"
     end
   end
 
@@ -61,6 +51,23 @@ class CardsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    Payjp.api_key = "sk_test_85fe27c2e2a8ea13cd45a930"
+    customer = Payjp::Customer.retrieve(@card.customer_id)
+    customer.delete
+    if @card.destroy
+      redirect_to action: "index", notice: "削除しました"
+    else
+      redirect_to action: "index", alert: "削除できませんでした"
+    end
+  end
+
+
+  # def pay
+  #   MyPayjp.create_charge_by_token(Card.first.customer_id,1000)
+  #   redirect_to root_path
+  # end
 
   private
 
