@@ -33,7 +33,7 @@ body{
       padding-top: 15px;
       padding-bottom: 10px;
       &--icon {
-        background-image: url(logo.png);
+        background-image: image-url("logo.png");
         height: 40px;
         width: 140px;
         background-size: cover;
