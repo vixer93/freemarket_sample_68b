@@ -18,7 +18,7 @@ body{
   color: orange;
 }
 
-.category-link{
+.item-link{
   color: $black;
   text-decoration: none;
   line-height: 32px;
@@ -35,7 +35,6 @@ body{
     color: orange; 
   }
 }
-
 
 
 .header {
@@ -70,48 +69,68 @@ body{
         &--category {
           padding-right: 30px;
           position: relative;
-          &:hover > .firstMenu{
-            // opacity: 1;
-            // visibility: visible;
+          
+          &:hover > .visibleTree{
+            opacity: 1;
+            visibility: visible;
           }
-          .firstMenu{
-            // opacity: 0;
-            // visibility: hidden;
+          .visibleTree{
+            
+            opacity: 0;
+            visibility: hidden;
             position: absolute;
+            display: flex;
+            top: 100%;
             z-index: 2;
             background-color: $white;
-              &__parent{
-                display: flex;
+
+              .firstMenu__parents{
                 width: 240px;
-                .secondMenu{
-                  position: relative;
-                  display: flex;
-                  flex-direction: column;
+                  &__parent{
+                  &:hover > .secondMenu__children{
+                  opacity: 1;
+                  visibility: visible;
+                }
+                  }
+                
+                .secondMenu__children{
+                  position: absolute;
+                  top: 0px;
+                  left: 100%;
+                  opacity: 0;
+                  visibility: hidden;
                   background-color: $white;
-                  
-                  &__second{
-
-                    .grandchildren{
-                      position: relative;
-                      display: flex;
-                      flex-direction: column;
-                      background-color: $white;
-                      &__third{
-
-                      }
-                    }
-
+                  &__child{
                     
+                  
+                  &:hover > .thirdMenu__grandchildren{
+                    opacity: 1;
+                    visibility: visible;
+                  }
+                }
+                    
+                    .thirdMenu__grandchildren{
+                      background-color: $white;
+                      position: absolute;
+                      left: 100%;
+                      top: 0px;
+                      opacity: 0;
+                      visibility: hidden;
+                      
+                      &__grandchild{
+                        background-color: $white;
+                      }
                   }
                 }
               }
+            }
               &__item{
                 position: relative;
                 
               }
             
             
-          }
+          
         }
         &--brand {
           padding-right: 30px;

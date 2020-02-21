@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @categories = Category.where(ancestry: nil).all.order("id ASC")
+    @parent = Category.where(ancestry: nil)
+    
   end
 end
