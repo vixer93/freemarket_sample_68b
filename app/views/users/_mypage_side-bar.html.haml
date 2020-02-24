@@ -10,7 +10,7 @@
           出品する
         %i.exhibition-btn.fa.fa-chevron-right.icon-btn
       %li.exhibited.icon-view
-        = link_to(root_path, class: "link_exhibited") do
+        = link_to(new_product_path, class: "link_exhibited") do
           出品した商品-出品中
         %i.exhibited-btn.fa.fa-chevron-right.icon-btn
       %li.transaction.icon-view
@@ -36,6 +36,6 @@
           支払い方法
         %i.card-btn.fa.fa-chevron-right.icon-btn
       %li.logout.icon-view
-        = link_to( destroy_user_session_path, class: "link_logout") do
+        = link_to( destroy_user_session_path, method: 'delete', class: "link_logout") do
           ログアウト
         %i.logout-btn.fa.fa-chevron-right.icon-btn
