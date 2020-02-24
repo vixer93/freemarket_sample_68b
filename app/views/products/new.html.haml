@@ -46,12 +46,15 @@
           商品の詳細
         .new-listing__show-form-box
           .new-listing__tk-form-group
-            .new-listing__sell-upload-head
-              カテゴリー
+            .new-listing__select-wrap
+              = f.label :category_id, "カテゴリー" ,class: "new-listing__sell-up-load-head"
               %span.new-listing__form-require
                 必須
-            .new-listing__select-wrap
-              -# = f.select :category, [["メンズ",1]]
+              .sell__about__right__wrap-box.parent
+                %select#parent
+                  %option{value: 0} ---
+                  - @parent.each do |parent|
+                    %option{value: "#{parent.name}"} #{parent.name}
               .new-listing__no-product
                 選択してください
           .new-listing__tk-form-group
