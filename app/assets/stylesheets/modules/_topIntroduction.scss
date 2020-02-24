@@ -1,7 +1,7 @@
 .box {
   padding: 60px 20px;
   &__top {
-
+    margin-bottom: 25px;
     &--title {
       font-size: 26px;
       text-align: center;
@@ -15,104 +15,76 @@
       margin: 0 auto;
     }
   }
-  &__main {
-    padding: 40px 0px 40px 70px;
+  &__mains {
     display: flex;
-    justify-content: center;
     align-items: center;
-    &--left {
+    max-width: 1020px;
+    margin: 0 auto;
+    &__main {
       width: 30%;
-      padding-right: 45px;
       position: relative;
+      margin: 16px 5% 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       &--sub-title {
-        display: flex;
         font-size: 24px;
-        margin: 0 63px;
+        font-weight: bold;
         &--green {
           color: $light_green;
+          font-size: 24px;
+          font-weight: bold;
         }
         &--black {
+          color: $black;
+          font-size: 24px;
+          font-weight: bold;
         }
       }
-      &--text{
+      &--text {
+        margin: 25px 0 0;
         font-size: 18px;
-        line-height: 1.5;
-        margin: 16px 0 0;
-        max-width: 306px;
       }
-      &--num1 {
-        font-size: 30px;
+      &--num {
         background-color: $light_green;
-        color: white;
         padding: 10px 20px;
+        font-size: 30px;
+        color: $white;
+        height: 55px;
+        width: 55px;
         border-radius: 4%;
         position: absolute;
         top: 0;
         left: 0;
       }
     }
-    &--center {
-      width: 30%;
-      padding-right: 45px;
-      position: relative;
-      &--sub-title {
-        display: flex;
-        font-size: 24px;
-        margin: 0 32px;
-        &--green {
-          color: $light_green;
-        }
-        &--black{
-        }
-      }
-      &--text{
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 16px 0 0;
-        align-items: center;
-        max-width: 306px;
-      }
-      &--num2 {
-        font-size: 30px;
-        background-color: $light_green;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 4%;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-    &--right {
+    &__main-right {
       width: 30%;
       position: relative;
-      padding-bottom: 25px;
-      &--sub-title {
-        display: flex;
-        font-size: 24px;
-        margin: 0 69px;
-        &--black {
-        }
-        &--green {
-          color: $light_green;
-        }
-      }
-      &--text{
+      margin: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &--text {
+        margin: 25px 0 27px;
         font-size: 18px;
-        line-height: 1.5;
-        margin: 16px 0 0;
-        max-width: 306px;
       }
-      &--num3 {
-        font-size: 30px;
+      &--num {
         background-color: $light_green;
-        color: white;
         padding: 10px 20px;
+        font-size: 30px;
+        color: $white;
+        height: 55px;
+        width: 55px;
         border-radius: 4%;
         position: absolute;
         top: 0;
         left: 0;
       }
     }
-  }
+    }
+}
+.top-img {
+  width: 100%;
+  padding-bottom: 25px;
 }

@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+}
+
+.brand-box {
+  padding: 0 60px;
+  width: 100%;
+  border-top: 1px solid #eee;
+  position: relative;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  &__lists {
+    display: flex;
+    padding: 17px 0 16px;
+    font-size: 14px;
+    max-width: 1040px;
+    margin: 0 auto;
+    &__list1 {
+      display: flex;
+      align-items: center;
+      &--link1 {
+        text-decoration: none;
+        padding-right: 10px;
+        color: $black;
+      }
+    }
+    &__list2 {
+      display: flex;
+      align-items: center;
+      &--link2 {
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
+      }
+    }
+    &__list3 {
+      display: flex;
+      align-items: center;
+      &--link3 {
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
+      }
+    }
+    &__list4 {
+      display: flex;
+      align-items: center;
+      &--link4 {
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: $black;
+      }
+    }
+    &__list5 {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      &--individual-product {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.backcolor-box {
+  background-color: #f8f8f8;
+  padding: 40px;
+  .details-in-box {
+    width: 700px;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 24px 40px 40px;
+    .detail {
+      &--name {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      &--main-img {
+        width: 560px;
+        margin: 0 auto;
+        &--image {
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+          height: 346px;
+        }
+        ul {
+          display: flex;
+          margin-top: 10px;
+          justify-content: center;
+          li {
+            width: 25%;
+            margin: 0 10px 0 0;
+            flex-direction: column;
+          }
+        }
+      }
+      &--item-name {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      &--price {
+        font-size: 46px;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 20px;
+      }
+      &--price-description {
+        font-size: 16px;
+        text-align: center;
+      }
+      table {
+        border: solid 1px #dedede;
+        width: 100%;
+        font-size: 14px;
+        th {
+          border: solid 1px #dedede;
+          background-color: #eee;
+          width: 20%;
+          padding: 8px;
+          text-align: center;
+        }
+        td {
+          border: solid 1px #dedede;
+          width: 61%;
+          padding: 15px;
+        }
+      }
+    }
+  }
+  .links {
+    background-color: #f8f8f8;
+    width: 780px;
+    margin: 0 auto;
+    padding: 24px 40px 40px;
+    &__around {
+      display: flex;
+      justify-content: space-between;
+      &--ahead {
+        text-decoration: none;
+        color: $light_green;
+      }
+      &--behind {
+        text-decoration: none;
+        color: $light_green;
+      }
+    }
+    &__category {
+      font-weight: bold;
+      font-size: 22px;
+      &--related {
+        text-decoration: none;
+        color: $light_green;
+      }
+    }
+  }
+}
+
+// 小さい3連の画像のサイズを調整するセレクタ
+.show-img{
+  // 縦横比の固定
+  object-fit: cover;
+  // 固定されたので画像の高さを縮める
+  height: 87px; 
+}
