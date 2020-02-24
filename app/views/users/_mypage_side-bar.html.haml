@@ -1,0 +1,41 @@
+.side-bar
+  .side-bar_upper
+    %ul.products-box
+      %li.mypage
+        = link_to("#" , class: "link_mypage") do
+          マイページ
+        %i.mypage-btn.fa.fa-chevron-right.icon-btn
+      %li.exhibition.icon-view
+        = link_to(root_path, class: "link_exhibition") do
+          出品する
+        %i.exhibition-btn.fa.fa-chevron-right.icon-btn
+      %li.exhibited.icon-view
+        = link_to(new_product_path, class: "link_exhibited") do
+          出品した商品-出品中
+        %i.exhibited-btn.fa.fa-chevron-right.icon-btn
+      %li.transaction.icon-view
+        = link_to(root_path, class: "link_transaction") do
+          出品した商品-取引中
+        %i.transaction-btn.fa.fa-chevron-right.icon-btn
+      %li.sold.icon-view
+        = link_to(root_path, class: "link_sold") do
+          出品した商品-売却済み
+        %i.sold-btn.fa.fa-chevron-right.icon-btn
+      %li.purchase.icon-view
+        = link_to(root_path, class: "link_purchase") do
+          購入した商品-取引中
+        %i.purchase-btn.fa.fa-chevron-right.icon-btn
+      %li.purchased.icon-view
+        = link_to(root_path, class: "link_purchased") do
+          購入した商品-過去の取引
+        %i.purchased-btn.fa.fa-chevron-right.icon-btn
+  .side-bar_lower
+    %ul.mypages-box
+      %li.card.icon-view
+        = link_to(root_path, class: "link_card") do
+          支払い方法
+        %i.card-btn.fa.fa-chevron-right.icon-btn
+      %li.logout.icon-view
+        = link_to( destroy_user_session_path, class: "link_logout") do
+          ログアウト
+        %i.logout-btn.fa.fa-chevron-right.icon-btn

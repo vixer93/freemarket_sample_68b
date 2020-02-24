@@ -1,0 +1,163 @@
+.add_all{
+  color: #ea352d;
+}
+.signup-main {
+  height: 100%;
+  width:  100%;
+  background-color: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  padding: 40px 0;
+  &__contents {
+    height: 90%;
+    width:  700px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  &__head {
+    padding: 32px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  &__form {
+    height: 100%;
+    padding: 40px 40px 64px;
+  }
+  &__input {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  &__form-group {
+    margin-top: 32px;
+    #error_explanation{
+      color: #ea352d;
+      padding-bottom: 10px;
+    }
+  }
+  .add-all{
+    color: #ea352d;
+  }
+  &__label {
+    font-weight: 600;
+  }
+  &__require {
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: top;
+  }
+  &__any {
+    background: #bdbdbd;
+    margin: 0 0 0 8px;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: top;
+  }
+  &__field {
+    margin: 8px 0 0;
+    width: 90%;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+    font-size: 16px;
+    &--side {
+      margin-right: 8px;
+    }
+  }
+  &__identification {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__personal-name {
+    display: flex;
+  }
+  &__birthday {
+    display: flex;
+  }
+  &__submit {
+    margin-top: 32px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: white;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  &__prefecture {
+    padding: 0 10px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-size: 10px 30px;
+    background-position: right 10px center;
+    background-color: white;
+    width: 100%;
+  }
+}
+
+
+.year {
+  padding: 0 10px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 10px 30px;
+  background-position: right 10px center;
+  background-color: white;
+}
+.month{
+  padding: 0 10px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 10px 30px;
+  background-position: right 10px center;
+  background-color: white;
+}
+.day {
+  padding: 0 10px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 10px 30px;
+  background-position: right 10px center;
+  background-color: white;
+}

@@ -6,13 +6,48 @@
     .header__box__sub
       .header__box__sub__left
         .header__box__sub__left--category
-          = link_to "#", class: "categoryBtn" do
+          = link_to "#", class: "categoryBtn", id: "category-link" do
             = "カテゴリー"
+          -# %ul.firstMenu
+          -#   %li.firstMenu__parent
+          -#     = link_to "レディース", "#", class: "category-link"
+
+          -#     %ul.secondMenu
+          -#       %li.secondMenu__children
+          -#         = link_to "トップス", "#", class: "category-link"
+          -#       %li.secondMenu__children
+          -#         = link_to "ジャケットアウター", "#", class: "category-link"
+
+          -#         %ul.thirdMenu
+          -#           %li.thirdMenu__grandchildren
+          -#             = link_to "Tシャツ半袖", "#", class: "category-link"
+          -#           %li.thirdMenu__grandchildren
+          -#             = link_to "Tシャツ七部袖", "#", class: "category-link"
+
+          -#   %li.firstMenu__parent
+          -#     = link_to "メンズ", "#", class: "category-link"
+
+          -#     %ul.secondMenu
+          -#       %li.secondMenu__children
+          -#         = link_to "トップス", "#", class: "category-link"
+          -#       %li.secondMenu__children
+          -#         = link_to "ジャケットアウター", "#", class: "category-link"
+                
+          -#         %ul.thirdMenu
+          -#           %li.thirdMenu__grandchildren
+          -#             = link_to "Tシャツ半袖", "#", class: "category-link"
+          -#           %li.thirdMenu__grandchildren
+          -#             = link_to "Tシャツ七部袖", "#", class: "category-link"
+
         .header__box__sub__left--brand
           = link_to "#", class: "brandBtn" do
             = "ブランド"
       .header__box__sub__right
-        = link_to '#', class: "header__box__sub__right--log-in" do
-          ログイン
-        = link_to '#', class: "header__box__sub__right--register-user" do
-          新規会員登録
+        - if current_user.nil?
+          = link_to new_user_session_path, class: "header__box__sub__right--log-in" do
+            ログイン
+          = link_to new_user_registration_path, class: "header__box__sub__right--register-user" do
+            新規会員登録
+        - else
+          = link_to user_path(current_user), class:"header__box__sub__right--log-out" do
+            マイページ
