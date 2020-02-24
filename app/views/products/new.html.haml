@@ -11,20 +11,39 @@
               必須
         .new-listing__p
           最大10枚までアップロードできます
-        .new-listing__sell-dropbox
+
+      
+        .new-listing__sell-dropbox#image-box__container
+          -# #image-box-1
+          -# #image-box
+          -#   #previews
+          -#     - if @product.persisted?
+          -#       - @product.images.each_with_index do |image, i|
+          -#         = image_tag image.name.url, data: { index: i }, width: "100", height: '100'
+        
           = f.fields_for :images do |i|
             .new-listing__sell-upload-items-container
-            %label
-              .new-listing__sell-upload-drop-box
-                = i.file_field :name, class: "sell-upload-drop-file"
-                %pre.visible-pc
-                  :preserve
-                    ドラッグアンドドロップ
-                    またはクリックしてファイルをアップロード
+              %label
+                .new-listing__sell-upload-drop-box
+                  = i.file_field :name, class: "sell-upload-drop-file", type: 'file', id:"img-file", value:""
+                  %pre.visible-pc
+                    :preserve
+                      ドラッグアンドドロップ
+                      またはクリックしてファイルをアップロード
+            -#       - if @product.persisted?
+            -#         = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+
+            -# - if @product.persisted?
+            -#   .sell-upload-drop-box{"data-index" => "#{@product.images.count}"}
+            -#     = file_field_tag :src, name: "product[images_attributes][#{@product.images.count}][src]", class: 'sell-upload-drop-file'
+            -#     .js-remove 削除
         .new-listing__no-image
           画像がありません
 
                 
+
+
+
       .new-listing__sell-content
         .new-listing__form-group
           .new-listing__sell-upload-head
