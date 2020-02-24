@@ -1,0 +1,145 @@
+.purchase-wrapper {
+  height: 1300px;
+  width: 100%;
+  background-color: gray;
+  .purchase__header {
+    height: 10%;
+    width: 100%;
+  }
+  .purchase__container {
+    height: 70%;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #FFF;
+    &__title {
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 25px;
+      font-weight: bold;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+    }
+    &__product {
+      height: 15%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      margin: 0 auto;
+      &_image {
+        height: 80%;
+      }
+      &__infomation {
+        margin-left: 30px;
+        &__name {
+
+        }
+        &__price {}
+        .purchase__container__product-infomation__price_right {
+          margin-right: 20px;
+        }
+        .purchase__container__product-infomation__price_left {
+          
+        }
+      }
+      &__payment {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        &__title {
+          font-size: 20px;
+          line-height: 44px;
+        }
+        &__price {
+          font-size: 25px;
+          line-height: 41px;
+        }
+      }
+    }
+    &__payment {
+      height: 10%;
+      width: 60%;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      &__box {
+        &__type {
+          width: 80%;
+          margin-left: 42px;
+          font-weight: bold;
+        }
+        &__register {
+          width: 80%;
+          margin-left: 42px;
+          color: #0099e8;
+          font-size: 15px;
+        }
+      }
+    }
+    &__shipping-address {
+      height: 25%;
+      width: 60%;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      padding-top: 20px;
+      margin: 0 auto;
+      
+      &__box {
+        height: 100%;
+        width: 80%;
+        margin-left: 42px;
+        &__font {
+          width: 80%;
+          font-weight: bold;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        &__name {
+          padding-top: 10px;
+          margin-right: 50px;
+        }
+        &__address-postal-code {
+          padding-top: 10px;
+        }
+      }
+    }
+    &__submit {
+      height: 10%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      &__box {
+        margin: 0 auto;
+        padding-top: 100px;
+        &__btn {
+          background-color: darkcyan;
+          border: 1px black solid;
+          height: 50px;
+          width: 150px;
+          outline: 0;
+        }
+        &__btn:hover {
+          background-color: darkcyan;
+          border: 1px black solid;
+          font-weight: bold;
+          height: 50px;
+          width: 150px;
+        }
+        &__btn:active {
+          background-color: rgb(3, 85, 85);
+          border: 2px black solid;
+          box-shadow: black 10px;
+          height: 40px;
+          width: 140px;
+          font-size: 5px;
+        }
+      }
+    }
+  }
+}
