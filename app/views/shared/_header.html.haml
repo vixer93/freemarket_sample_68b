@@ -6,8 +6,25 @@
     .header__box__sub
       .header__box__sub__left
         .header__box__sub__left--category
-          = link_to "#", class: "categoryBtn" do
+          = link_to "#", class: "categoryBtn", id: "left-category" do
             = "カテゴリー"
+
+          .visibleTree
+            %ul.firstMenu__parents
+              - @parent.each do |parent|
+                %li.firstMenu__parents__parent
+                  = link_to "#{parent.name}", "#", class: "item-link" 
+
+                  %ul.secondMenu__children
+                    - parent.children.each do |child|
+                      %li.secondMenu__children__child
+                        = link_to "#{child.name}", "#", class: "item-link" 
+
+                        %ul.thirdMenu__grandchildren
+                          - child.children.each do |grandchildren|
+                            %li.thirdMenu__grandchildren__grandchild
+                              = link_to "#{grandchildren.name}", "#", class: "item-link" 
+
         .header__box__sub__left--brand
       .header__box__sub__right
         - if current_user.nil?
@@ -16,5 +33,5 @@
           = link_to new_user_registration_path, class: "header__box__sub__right--register-user" do
             新規会員登録
         - else
-          = link_to users_path(current_user), class:"header__box__sub__right--log-out" do
+          = link_to user_path(current_user), class:"header__box__sub__right--log-out" do
             マイページ
