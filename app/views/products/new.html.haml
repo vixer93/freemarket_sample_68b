@@ -46,12 +46,15 @@
           商品の詳細
         .new-listing__show-form-box
           .new-listing__tk-form-group
-            .new-listing__sell-upload-head
-              カテゴリー
+            .new-listing__select-wrap
+              = f.label :category_id, "カテゴリー" ,class: "new-listing__sell-up-load-head"
               %span.new-listing__form-require
                 必須
-            .new-listing__select-wrap
-              -# = f.select :category, [["メンズ",1]]
+              .sell__about__right__wrap-box.parent
+                %select#parent
+                  %option{value: 0} ---
+                  - @parent.each do |parent|
+                    %option{value: "#{parent.name}"} #{parent.name}
               .new-listing__no-product
                 選択してください
           .new-listing__tk-form-group
@@ -69,7 +72,7 @@
                 必須
             .new-listing__select-wrap
               %i.icon-arrow-bottom
-                = f.select :condition, [["新品/未使用",0],["未使用に近い",1],["目立った傷や汚れなし",2],["やや傷や汚れなし",3],["傷や汚れあり",4],["全体的に状態が悪い",5]], prompt: "---", class: "select-default"
+                = f.select :condition, Product.conditions_i18n.invert, {}, class: "select-default"
               .new-listing__no-product.no-product4
                   
 
@@ -85,7 +88,7 @@
               %apan.new-listing__form-require
                 必須
             .new-listing__select-wrap
-              = f.select :send_price, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select-default"
+              = f.select :send_price, Product.send_prices_i18n.invert, {}, class: "select-default"
               .new-listing__no-product.no-product5
                   
 
@@ -106,7 +109,7 @@
               %span.new-listing__form-require
                 必須
             .new-listing__select-wrap
-              = f.select :ship_day, [["1~2日で発送", 0], ["2~3日で発送", 1], ["4~7日で発送", 2]], class: "select", prompt: "---"
+              = f.select :ship_day, Product.ship_days_i18n.invert, {}, class: "select"
               .new-listing__no-product.no-product7
                   
       .new-listing__settlement
