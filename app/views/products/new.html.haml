@@ -12,17 +12,21 @@
         .new-listing__p
           最大10枚までアップロードできます
 
+          
         #image-box-1
+          
           .item-box.item-num-0#image-box__container
             = f.fields_for :images do |i|
               .new-listing__sell-upload-items-container
                 %label
                   .new-listing__sell-upload-drop-box
                     = i.file_field :image, type: 'file', name: "item[images_attributes][][image_url]", value:"",style: "display:none", class: "sell-upload-drop-file", id:"img-file"
-                    %pre.visible-pc
-                      :preserve
-                        ドラッグアンドドロップ
-                        またはクリックしてファイルをアップロード
+                    -# %pre.visible-pc
+                    -#   :preserve
+                    -#     ドラッグアンドドロップ
+                    -#     またはクリックしてファイルをアップロード
+                    %i.fa.fa-camera
+                  
         .new-listing__no-image
           画像がありません
 
