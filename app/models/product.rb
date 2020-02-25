@@ -18,8 +18,10 @@ class Product < ApplicationRecord
     validates :description
     validates :price
     validates :condition
-    # validates :status
+    validates :status
     validates :send_price
     validates :ship_day
+    validates :prefecture_id
+    validates :category_id
   end
 end
