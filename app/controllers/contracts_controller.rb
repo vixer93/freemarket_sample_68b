@@ -6,30 +6,23 @@ class ContractsController < ApplicationController
   end
 
   def create
-    # contract = Contract.new(buyer_id:   current_user.id,
-    #                         product_id: params[:id]
-    #                        )
     contract = Contract.new(buyer_id:   current_user.id,
-                            product_id: 2
+                            product_id: params[:id]
                            )
     if contract.save
       MyPayjp.create_charge_by_token(current_user.card.customer_id,
                                     @product.price)
-      @product.status = "1"
-      @product.save!
-
+      @product.update(status: 1)
       redirect_to root_path, notice: "購入が完了しました"
     else
-      # render :new
-      redirect_to root_path
+      render :new
     end
   end
 
   private
 
   def set_product
-    # @product = Product.find(params[:id])
-    @product = Product.find(2)
+    @product = Product.find(params[:product_id])
   end
 
 end

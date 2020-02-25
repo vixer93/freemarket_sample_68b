@@ -20,8 +20,7 @@ Rails.application.routes.draw do
   end
   resources :cards, only: [:new, :create, :index, :destroy]
   resources :products do
-    # resources :contracts, only: [:create]
+    resources :contracts, only: [:new, :create]
   end
-  resources :contracts, only: [:create]
   resources :cards, only: [:index, :new, :create, :delete]
 end
