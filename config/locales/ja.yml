@@ -3,10 +3,10 @@ ja:
   enums:
     product:
       condition:
-        new:            "新品/未使用"
+        brand_new:      "新品/未使用"
         near_to_unused: "未使用に近い"
         no_scrach:      "目立った傷や汚れなし"
-        slite_scrach:   "やや傷や汚れあり"
+        slight_scrach:   "やや傷や汚れあり"
         has_scrach:     "傷や汚れあり"
         bad_state:      "全体的に状態が悪い"
       send_price:
