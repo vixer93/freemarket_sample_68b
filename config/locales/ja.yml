@@ -1,5 +1,24 @@
 ---
 ja:
+  enums:
+    product:
+      condition:
+        new:            "新品/未使用"
+        near_to_unused: "未使用に近い"
+        no_scrach:      "目立った傷や汚れなし"
+        slite_scrach:   "やや傷や汚れあり"
+        has_scrach:     "傷や汚れあり"
+        bad_state:      "全体的に状態が悪い"
+      send_price:
+        listing_person: "出品者負担"
+        buyer_burden:   "購入者負担"
+      status:
+        display:        "出品中"
+        sold:           "売却済"
+      ship_day:
+        early_ship:     "1~2日で発送"
+        mid_ship:       "2~3日で発送"
+        late_ship:      "4~7日で発送"
   activerecord:
     errors:
       messages:
