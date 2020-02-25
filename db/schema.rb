@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_18_075311) do
+ActiveRecord::Schema.define(version: 2020_02_24_073437) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 2020_02_18_075311) do
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.index ["ancestry"], name: "index_categories_on_ancestry"
+  end
+
+  create_table "contracts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "buyer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "fk_rails_7091f65abd"
+    t.index ["product_id"], name: "fk_rails_d9e2e7cf99"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,6 +100,8 @@ ActiveRecord::Schema.define(version: 2020_02_18_075311) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "cards", "users"
+  add_foreign_key "contracts", "products"
+  add_foreign_key "contracts", "users", column: "buyer_id"
   add_foreign_key "images", "products"
   add_foreign_key "products", "users"
 end
