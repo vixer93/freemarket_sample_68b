@@ -54,7 +54,11 @@
                 %select#parent
                   %option{value: 0} ---
                   - @parent.each do |parent|
-                    %option{value: "#{parent.name}"} #{parent.name}
+                    %option{value: "#{parent.id}"} #{parent.name}
+              .child
+                %select#child
+              .grand_child
+                = f.collection_select(:category_id, [], :id, :name, {prompt: "---"}, {id: "grand_child"})
               .new-listing__no-product
                 選択してください
           .new-listing__tk-form-group
