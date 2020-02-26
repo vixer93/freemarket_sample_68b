@@ -1,5 +1,13 @@
 class HomeController < ApplicationController
   def index
-    @parent = Category.where(ancestry: nil)
-    end
+  end
+
+  def new
+    
+  end
+
+  # private
+  # def user_params
+  #   params.require(:users)
+  # end
 end

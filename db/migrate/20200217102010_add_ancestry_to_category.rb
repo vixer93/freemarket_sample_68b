@@ -8,5 +8,4 @@ class AddAncestryToCategory < ActiveRecord::Migration[5.2]
     remove_index :categories, :ancestry
     remove_column :categories, :ancestry
   end
-  
 end
