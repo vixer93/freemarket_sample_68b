@@ -1,48 +1,26 @@
 .wrapper
   .containerBrand
     %h2.containerBrand__title
-      ピックアップブランド
+      ピックアップカテゴリー
     .containerBrand__product
       .containerBrand__product--head
         = link_to "#", class: "products--head" do
-          %h3.head アーカイバ
+          %h3.head
+            %span.head__new new!
+            .head__left ⇦ - - -新規投稿商品- - - ⇨ old
       .containerBrand__product--lists
         .containerBrand__product--lists__list
-        = link_to "#", class: "listBtn" do
-          %figure.product__images
-            = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", alt: "商品画像", class: "product__images--image"
-          .containerBrand__product--lists__list--body
-            %h3.product--name
-              商品名
-            .containerBrand__product--lists__list--body__details
-              %ul.details__menu
-                %li 3000円
-                %li ★
-            %p.taxIncluded （税込）
-
-        .containerBrand__product--lists__list
-        = link_to "#", class: "listBtn" do
-          %figure.product__images
-            = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", alt: "商品画像", class: "product__images--image"
-          .containerBrand__product--lists__list--body
-            %h3.product--name
-              商品名
-            .containerBrand__product--lists__list--body__details
-              %ul.details__menu
-                %li 3000円
-                %li ★
-            %p.taxIncluded （税込）
-
-        .containerBrand__product--lists__list
-        = link_to "#", class: "listBtn" do
-          %figure.product__images
-            = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", alt: "商品画像", class: "product__images--image"
-          .containerBrand__product--lists__list--body
-            %h3.product--name
-              商品名
-            .containerBrand__product--lists__list--body__details
-              %ul.details__menu
-                %li 3000円
-                %li ★
-            %p.taxIncluded （税込）
-        
+        - @brandProducts.each do |product|
+          = link_to product_path(product), class: "listBtn" do
+            %figure.product__images
+              = image_tag product.images[0][:name], alt: "image_url",size: "200x150", class:"new-img"
+            .containerBrand__product--lists__list--body
+              %h3.product--name
+                = product.name
+              .containerBrand__product--lists__list--body__details
+                %ul.details__menu
+                  %li
+                    = product.price
+                    円
+                  %li ★
+              %p.taxIncluded （税込）
