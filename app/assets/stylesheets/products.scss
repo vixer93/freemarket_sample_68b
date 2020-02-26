@@ -3,9 +3,7 @@
 }
 .new-listing{
   width: 100vw;
-  height: 2500px;
-  //background-color: chartreuse;
-  //opacity: 0.5;#6cb8ff#fff66c#33CCFF#BEFF15#ffa36c
+  height: 100%;
   background: linear-gradient(45deg,#AEFFBD , #D6FF58 , #1BFF4A);
   background-size: 600% 600%;
   animation: AnimationName 3s ease infinite;
@@ -22,7 +20,7 @@
   }
   &__sell-form{
     padding: 40px;
-    width: 620px;
+    width: 100%;
     
   }
   &__single-head{
@@ -79,23 +77,77 @@
     margin: 8px 0 0;
     line-height: 1.5;
   }
-  &__sell-dropbox{
+  
+  #image-box-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item-box{
     display: block;
-    height: 200px;
-    width: 620px;
+    height: 100px;
     background-color: #C0C0C0;
     margin: 16px 0 0 0  ;
-    padding: 40px;
     border: 2px dotted #888888;
-    
+    word-wrap: break-all;
+    // background-image: url(camera-image3.jpeg);
+    // background-size:  25%;
+    // background-repeat: no-repeat;
+    // background-position-x:  center;
+    // background-position-y: center;
+    text-align: center;
+    font-size: 30px;
+
   }
-  
+  .item-num-0{
+    width: 620px;
+  }
+  .item-num-1{
+    width: 491px;
+  }
+  .item-num-2{
+    width: 363px;
+  }
+  .item-num-3{
+    width: 234px;
+  }
+  .item-num-4{
+    width: 106px;
+  }
+  //下段のfile_field
+  .item-num-5{
+    width: 100%;
+  }
+  .item-num-6{
+    width: 491px;
+  }
+  .item-num-7{
+    width: 363px;
+  }
+  .item-num-8{
+    width: 234px;
+  }
+  .item-num-9{
+    width: 106px;
+  }
+  .item-image{
+    margin-top: 16px;
+  }
+  .item-image__operetion--delete:hover{
+    cursor : pointer;
+  }
+  &__sell-upload-items-container{
+    width: 100%;
+    height: 100%;
+  }
   &__sell-upload-drop-box{
     height: 100%;
     width: 100%;
     margin-left: 0;
     float: right;
-    //background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     input{
       touch-action: manipulation;
       font-family: inherit;
@@ -104,7 +156,7 @@
       display: none;
     }
     pre{
-      padding-top: 30px;
+      // padding-top: 30px;
       text-align: center;
       font-size: 14px;
     }
