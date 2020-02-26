@@ -27,63 +27,63 @@ describe Address do
       user    = build(:user)
       address = build(:address, user_id: user.id, ship_family_name: "")
       address.valid?
-      expect(address.errors[:ship_family_name]).to include("can't be blank")
+      expect(address.errors[:ship_family_name]).to include("を入力してください")
     end
 
     it "is invalid without ship_first_name" do
       user    = build(:user)
       address = build(:address, user_id: user.id, ship_first_name: "")
       address.valid?
-      expect(address.errors[:ship_first_name]).to include("can't be blank")
+      expect(address.errors[:ship_first_name]).to include("を入力してください")
     end
 
     it "is invalid without ship_family_name_kana" do
       user    = build(:user)
       address = build(:address, user_id: user.id, ship_family_name_kana: "")
       address.valid?
-      expect(address.errors[:ship_family_name_kana]).to include("can't be blank")
+      expect(address.errors[:ship_family_name_kana]).to include("を入力してください")
     end
 
     it "is invalid without ship_first_name_kana" do
       user    = build(:user)
       address = build(:address, user_id: user.id, ship_first_name_kana: "")
       address.valid?
-      expect(address.errors[:ship_first_name_kana]).to include("can't be blank")
+      expect(address.errors[:ship_first_name_kana]).to include("を入力してください")
     end
 
     it "is invalid without postal_code" do
       user    = build(:user)
       address = build(:address, user_id: user.id, postal_code: "")
       address.valid?
-      expect(address.errors[:postal_code]).to include("can't be blank")
+      expect(address.errors[:postal_code]).to include("を入力してください")
     end
 
     it "is invalid without prefecture_id" do
       user    = build(:user)
       address = build(:address, user_id: user.id, prefecture_id: nil)
       address.valid?
-      expect(address.errors[:prefecture_id]).to include("can't be blank")
+      expect(address.errors[:prefecture_id]).to include("を入力してください")
     end
 
     it "is invalid without municipality" do
       user    = build(:user)
       address = build(:address, user_id: user.id, municipality: "")
       address.valid?
-      expect(address.errors[:municipality]).to include("can't be blank")
+      expect(address.errors[:municipality]).to include("を入力してください")
     end
 
     it "is invalid without block_number" do
       user    = build(:user)
       address = build(:address, user_id: user.id, block_number: "")
       address.valid?
-      expect(address.errors[:block_number]).to include("can't be blank")
+      expect(address.errors[:block_number]).to include("を入力してください")
     end
 
     it "is invalid with incorrect postal_code format" do
       user    = build(:user)
       address = build(:address, user_id: user.id, postal_code: "1234567")
       address.valid?
-      expect(address.errors[:postal_code]).to include("is invalid")
+      expect(address.errors[:postal_code]).to include("は不正な値です")
     end
   end
 end
