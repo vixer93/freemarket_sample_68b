@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+    
   end
 
   def show
@@ -30,17 +31,20 @@ class ProductsController < ApplicationController
   def destroy
   end
 
-  private
-  def product_params
-    params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name]).merge(user_id: current_user.id, category_id: 1, prefecture_id: params[:product][:prefecture_id], status: 0)
+  def mid_category
+    @mid_categories = Category.where(ancestry: params[:big_category_id])
+    render json: @mid_categories
   end
 
-  # def integer_string?(str)
-  #   Integer(str)
-  #   true
-  # rescue ArgumentError
-  #   false
-  # end
+  def small_category
+    @small_categories = Category.where(ancestry: "#{params[:big_category_id]}/#{params[:mid_category_id]}")
+    render json: @small_categories
+  end
+
+  private
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name]).merge(user_id: current_user.id, category_id: params[:product][:category_id], prefecture_id: params[:product][:prefecture_id], status: 0)
+  end
 
   def number?(str)
      (str =~ /\A[0~9]+\z/) ? true : false
