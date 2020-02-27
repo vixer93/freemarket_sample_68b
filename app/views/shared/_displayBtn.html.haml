@@ -1,5 +1,6 @@
-= link_to new_product_path, class: "displayBtn" do
-  .displayBtn__in-box
-    .displayBtn__in-box--text
-      出品する
-    = image_tag "icon_camera.png", size: "54x54", class: "displayBtn__in-box--img"
+- if user_signed_in?
+  = link_to new_product_path, class: "displayBtn" do
+    .displayBtn__in-box
+      .displayBtn__in-box--text
+        出品する
+      = image_tag "icon_camera.png", size: "54x54", class: "displayBtn__in-box--img"
