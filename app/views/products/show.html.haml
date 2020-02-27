@@ -5,67 +5,73 @@
         FURIMA
       >
     %li.brand-box__lists__list2
-      = link_to "#", class: "brand-box__lists__list2--link2" do
-        レディース
+      = @product.category.parent.parent.name
+        
       >
     %li.brand-box__lists__list3
-      = link_to "#", class: "brand-box__lists__list3--link3" do
-        トップス
+      = @product.category.parent.name
+        
       >
     %li.brand-box__lists__list4
-      = link_to "#",class: "brand-box__lists__list4--link4" do
-        Tシャツ/カットソー(半袖/袖なし)
+      = @product.category.name
+        
       >
     %li.brand-box__lists__list5
       .brand-box__lists__list5--individual-product
-        products1
+        = @product.name
 
 .backcolor-box 
   .details-in-box
     .detail
       .detail--name
-        product1
+        = @product.name
       %ul.detail--main-img
         %li
-          = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", class: "detail--main-img--image"
+          = image_tag @product.images[0].name.url, class: "detail--main-img--image"
           %ul
-            %li
-              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140" , class: "show-img"
-            %li
-              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140" , class: "show-img"
-            %li
-              = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png", size: "140x140" , class: "show-img"
+            - @product.images.each do |image|
+              %li
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+                = image_tag image.name.url, size: "140x140" , class: "show-img"
+              
       .detail--price
-        ¥ 10000
-      .detail--price-description
-        (税込) 送料込み
+        = @product.price
+        円
+      .detail--price-description 
+        = @product.send_price
       .detail--item-name
-        product1
+        = @product.name
       .detail__table
+      
         %table
           %tbody
             %tr
               %th
                 出品者
               %td
-                誰かさん
+                = @product.user.nickname
             %tr
               %th
                 カテゴリー
               %td
-                = link_to "#" do
-                  レディース
-                  %br
-                = link_to "#" do
-                  トップス
-                  %br
-                = link_to "#" do
-                  Tシャツ/カットソー(半袖/袖なし)
+                = @product.category.parent.parent.name
+                %br
+                = @product.category.parent.name
+                %br
+                = @product.category.name
+                  
             %tr
               %th
                 ブランド
               %td
-                ”仮置き表示”
+                = @product.brand
             %tr
               %th
                 商品のサイズ
@@ -75,23 +81,22 @@
               %th
                 商品の状態
               %td
-                新品/未使用
+                = @product.condition_i18n
             %tr
               %th
                 配送料の負担
               %td
-                送料込み(出品者負担)
+                = @product.send_price_i18n
             %tr
               %th
                 発送元の地域
               %td
-                = link_to "#" do
-                  青森県
+                = @product.prefecture.name
             %tr
               %th
                 発送日の目安
               %td
-                1~2日で発送
+                = @product.ship_day_i18n
   .links
     .links__around
       = link_to "#", class: "links__around--ahead" do
@@ -101,6 +106,13 @@
     .links__category
       = link_to "#", class: "links__category--related" do
         レディースをもっと見る
+    - if current_user.id == @product.user_id
+      = link_to "商品を編集する", edit_product_path(@product), class: "edit-btn"
+      = link_to "商品を削除する", product_path(params[:id]), method: :delete, class: "delete-btn"
+    - else
+      = link_to "購入", "#", class: "buy-btn"
+
+
 
 = render 'shared/appBanner'
 = render 'shared/displayBtn'

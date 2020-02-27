@@ -92,11 +92,16 @@
         ul {
           display: flex;
           margin-top: 10px;
-          justify-content: center;
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
           li {
             width: 25%;
             margin: 0 10px 0 0;
             flex-direction: column;
+            display: inline-block;
+
+
           }
         }
       }
@@ -158,9 +163,60 @@
         color: $light_green;
       }
     }
+    .edit-btn{
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      text-decoration: none;
+      color: #00BCD4;
+       background: #ECECEC;
+      transition: .4s;
+      font-size: 25px;
+      &:hover {
+        background: red;
+        color: white;
+      }
+    }
+    .delete-btn{
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      text-decoration: none;
+      color: #00BCD4;
+       background: #ECECEC;
+      transition: .4s;
+      font-size: 25px;
+      margin-top: 10px;
+      &:hover {
+        background: red;
+        color: white;
+      }
+    }
+    .buy-btn{
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      text-decoration: none;
+      color: #00BCD4;
+      background: #ECECEC;
+      transition: .4s;
+      font-size: 25px;
+      &:hover {
+        background: #00bcd4;
+        color: white;
+      }
+    }
   }
 }
-
 // 小さい3連の画像のサイズを調整するセレクタ
 .show-img{
   // 縦横比の固定

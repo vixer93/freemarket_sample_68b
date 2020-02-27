@@ -1,34 +1,36 @@
-
-
 .head{
   font-weight: bold;
+  width: 35%;
   text-align: center;
   color: $light_green;
+  display: flex;
+  align-items: center;
+  margin-left: 280px;
+  &__new {
+    color: rgb(219, 56, 83);
+  }
+  &__left{
+    
+  }
 }
-
 .products--head{
+  margin-left: 10px;
   text-decoration: none;
 }
-
-
 .listBtn{
   text-decoration: none;
   display: inline-block;
   background-color: white;
 }
-
 .listBtn:hover {
   opacity: 0.5 ;
 }
-
-
 .product--name{
   overflow: hidden;
   line-height: 1.5;
   font-size: 16px;
   text-align: left;
 }
-
 .product__images{
   width: 220px;
   height: 150px;
@@ -48,18 +50,15 @@
     object-fit: cover;
   }
 }
-
 .details__menu{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .taxIncluded{
   font-size: 10px;
   text-align: left;
 }
-
 .containerBrand{
   background-color: #f8f8f8;
   padding-bottom: 80px;
@@ -69,16 +68,23 @@
     font-size: 28px;
     line-height: 1.4;
     font-weight: bold;
+    margin-left: 50px;
   }
     &__product{
-
+      height: 321px;
+      width: 780px;
+      margin: 0 auto;
+      
       &--head{
       }
       &--lists{
       width: 780px;
       margin: 26px auto;
       display: flex;
-      justify-content: space-around;
+      overflow-x: scroll;
+        .product__images {
+          margin-left: 45px;
+        }
       &__list{
         width: 220px;
         display: inline-block;
@@ -86,11 +92,15 @@
           background-color: white;
           color: black;
           padding: 16px;
-          &__details{
+          &__details__menu{
             font-size: 16px;
+            text-align: left;
           }
         }
       }
     }
   }
 }
+
+
+

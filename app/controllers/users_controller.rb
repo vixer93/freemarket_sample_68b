@@ -20,4 +20,6 @@ class UsersController < ApplicationController
 
   def transaction
   end
+
+
 end
