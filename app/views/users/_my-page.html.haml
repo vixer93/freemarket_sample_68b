@@ -14,12 +14,12 @@
         .buy__first
           出品した商品
         .buy__second
-          .buy__second--left
-            = link_to("#", class: "buy__second--left__btn") do
-              取引中
-          .buy__second--right
-            = link_to("#", class: "buy__second--right__btn") do
-              過去の取引
+          %a.buy__second--left.left-man
+            取引中
+          %a.buy__second--right.right-man
+            過去の取引
         .buy__third
           取引中の商品がありません
+        .buy__fifth
+          過去の取引はありません
 

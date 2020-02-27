@@ -6,28 +6,28 @@
       >
     %li.brand-box__lists__list2
       = @product.category.parent.parent.name
-        
+
       >
     %li.brand-box__lists__list3
       = @product.category.parent.name
-        
+
       >
     %li.brand-box__lists__list4
       = @product.category.name
-        
+
       >
     %li.brand-box__lists__list5
       .brand-box__lists__list5--individual-product
         = @product.name
 
-.backcolor-box 
+.backcolor-box
   .details-in-box
     .detail
       .detail--name
         = @product.name
       %ul.detail--main-img
         %li
-          = image_tag @product.images[0].name.url, class: "detail--main-img--image"
+          -# = image_tag @product.images[0].name.url, class: "detail--main-img--image"
           %ul
             - @product.images.each do |image|
               %li
