@@ -38,7 +38,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    binding.pry
     params.require(:product)
       .permit(:name, :description, :price, :condition, :brand, :send_price,
               :ship_day, images_attributes: [:name])
