@@ -10,7 +10,7 @@
         - @newProducts.each do |product|
           = link_to product_path(:id), class: "listBtn" do
             %figure.product__images
-              = image_tag product.images[0][:name], alt: "image_url",size: "200x150", class:"new-img"
+              -# = image_tag product.images[0][:name], alt: "image_url",size: "200x150", class:"new-img"
             .containerCategory__product--lists__list--body
               %h3.product--name
                 = product.name
