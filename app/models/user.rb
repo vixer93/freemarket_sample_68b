@@ -4,7 +4,6 @@ class User < ApplicationRecord
 
   has_one :address, dependent: :delete
   has_one :card,    dependent: :delete
-  has_many :products, dependent: :delete_all
 
   with_options presence: true do
     validates :nickname
@@ -24,3 +23,4 @@ class User < ApplicationRecord
     end
   end
 end
+

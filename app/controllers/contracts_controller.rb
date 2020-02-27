@@ -3,13 +3,14 @@ class ContractsController < ApplicationController
   before_action :set_product
 
   def new
+    @contract = Contract.new
   end
 
   def create
-    contract = Contract.new(buyer_id:   current_user.id,
-                            product_id: params[:id]
+    @contract = Contract.new(buyer_id:   current_user.id,
+                            product_id:  @product.id
                            )
-    if contract.save
+    if @contract.save
       MyPayjp.create_charge_by_token(current_user.card.customer_id,
                                     @product.price)
       @product.update(status: 1)

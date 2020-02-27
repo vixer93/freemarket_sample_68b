@@ -16,7 +16,7 @@
         = form_with url: new_card_path do
           = link_to(new_card_path, class: "credit-btn") do
             %i.credit-btn__btn.fa.fa-credit-card
-              - if @card.present?
+              - if current_user.card.present?
                 あなたのカード情報へ
               - else
                 クレジットカードを登録

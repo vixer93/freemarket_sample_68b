@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, except: [:index, :new, :create]
+  before_action :set_product, only: [:edit, :update, :delete]
 
   def index
   end
@@ -54,7 +54,11 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :src, :_destroy, :id]).merge(user_id: current_user.id, category_id: 1, prefecture_id: params[:product][:prefecture_id], status: "0")
+    params.require(:product)
+      .permit(:name, :description, :price, :condition, :brand, :send_price,
+              :ship_day, images_attributes: [:name])
+      .merge(user_id: current_user.id, category_id: params[:product][:category_id],
+             prefecture_id: params[:product][:prefecture_id], status: 0)
   end
 
   def set_product

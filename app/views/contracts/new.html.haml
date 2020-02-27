@@ -6,25 +6,35 @@
       = image_tag @product.images[0].name.url, class:"purchase__container__product-infomation_image", size: "100x100"
       %ul.purchase__container__product__infomation
         %li.purchase__container__product-infomation__name
-          フォーマルブラウス
+          = @product.name
         %li.purchase__container__product-infomation__price
+          = @product.price
           %span.purchase__container__product-infomation__price_right
-            ¥1,980 (税込)
-          %span.purchase__container__product-infomation__price_left
-            送料込み
+            円
+        %li.purchase__container__product-infomation__price
+          600
+          %span.purchase__container__product-infomation__price_right
+            円(送料)
     .purchase__container__product
       .purchase__container__product__payment
         %span.purchase__container__product__payment__title
           支払い金額
         %span.purchase__container__product__payment__price
-          ¥1,980
+          - if (@product.send_price_i18n == "出品者負担")
+            = @product.price
+            %span.purchase__container__product-infomation__price_right
+              円
+          - else
+            = (@product.price.to_i + 600)
+            %span.purchase__container__product-infomation__price_right
+              円
     .purchase__container__payment
       %ul.purchase__container__payment__box
         %li.purchase__container__payment__box__type
           支払い方法
         - if current_user.card.nil?
           %li
-            = link_to "登録してください", new_card_path, class: "purchase__container__payment__box__register"
+            = link_to "登録してください", user_path(current_user), class: "purchase__container__payment__box__register"
         - else
           %li.purchase__container__payment__box__register
             クレジットカード
@@ -46,5 +56,9 @@
           = current_user.address.prefecture.name + current_user.address.municipality + current_user.address.block_number
     %label.purchase__container__submit
       %button.purchase__container__submit__btn
-        = link_to product_contracts_path, method: "post", class: "purchase__container__submit__btn--text" do
-          確定する
+        - if current_user.card.present?
+          = link_to product_contracts_path(@product,@contract), method: "post", class: "purchase__container__submit__btn--text" do
+            確定する
+        - else
+          = link_to user_path(current_user), class: "purchase__container__submit__btn--text" do
+            クレジットカードを登録してください

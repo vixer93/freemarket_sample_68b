@@ -91,7 +91,7 @@
               %th
                 発送元の地域
               %td
-                = @product.prefecture.name
+                -# = @product.prefecture.name
             %tr
               %th
                 発送日の目安
@@ -110,7 +110,8 @@
       = link_to "商品を編集する", edit_product_path(@product), class: "edit-btn"
       = link_to "商品を削除する", product_path(params[:id]), method: :delete, class: "delete-btn"
     - else
-      = link_to "購入", "#", class: "buy-btn"
+      = link_to new_product_contract_path(@product), class: "buy-btn" do
+        確定画面
 
 
 
