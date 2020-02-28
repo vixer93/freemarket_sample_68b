@@ -325,8 +325,13 @@
     display: flex;
     margin-top: 10px;
   }
-  .money{
+  .money01{
     margin-left: auto;
+    float: left;
+  }
+  .money02{
+    margin-left: auto;
+    float: left;
   }
   &__send-boxes{
     width: 50%;
