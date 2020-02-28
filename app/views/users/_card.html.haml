@@ -1,15 +1,25 @@
 .main-card
   .main-card__top
-    支払い方法
+    - if @card.present?
+      カード情報
+    - else
+      支払い方法
   .main-card__bottom
     .main-card__bottom--first
       .main-card__bottom--first__credit-card
-        クレジットカード一覧
+        - if @card.present?
+
+        - else
+          クレジットカード一覧
     .main-card__bottom--second
       .main-card__bottom--second__credit-btn
-        = link_to("#", class: "credit-btn") do
-          %i.credit-btn__btn.fa.fa-credit-card
-          クレジットカードを追加する
+        = form_with url: new_card_path do
+          = link_to(new_card_path, class: "credit-btn") do
+            %i.credit-btn__btn.fa.fa-credit-card
+              - if current_user.card.present?
+                あなたのカード情報へ
+              - else
+                クレジットカードを登録
     .main-card__bottom--third
       = link_to("#", class: "how-pay") do
         支払い方法について

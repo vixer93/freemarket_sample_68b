@@ -35,7 +35,7 @@
           }
           &--left{
             width: 50%;
-            border-top: red solid;
+            border-top: red solid 3px;
             background: #fafafa;
           }
           &--left:hover{
@@ -58,6 +58,17 @@
           padding: 160px 0 60px;
           font-size: 16px;
           font-weight: bold;
+          position: relative;
+        }
+        &__fifth{
+          height: 236px;
+          background: #fafafa;
+          color: #cccccc;
+          text-align: center;
+          padding: 160px 0 60px;
+          font-size: 16px;
+          font-weight: bold;
+          display: none;
         }
         &__forth{
           margin-top: 40px;

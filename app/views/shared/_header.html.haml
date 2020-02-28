@@ -26,8 +26,6 @@
                               = link_to "#{grandchildren.name}", "#", class: "item-link" 
 
         .header__box__sub__left--brand
-          = link_to "#", class: "brandBtn" do
-            = "ブランド"
       .header__box__sub__right
         - if current_user.nil?
           = link_to new_user_session_path, class: "header__box__sub__right--log-in" do
@@ -35,5 +33,5 @@
           = link_to new_user_registration_path, class: "header__box__sub__right--register-user" do
             新規会員登録
         - else
-          = link_to user_path(current_user), class:"header__box__sub__right--log-out" do
+          = link_to users_path(current_user), class:"header__box__sub__right--log-out" do
             マイページ

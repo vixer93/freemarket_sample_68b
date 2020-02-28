@@ -68,15 +68,12 @@ body{
 
         &--category {
           padding-right: 30px;
-
           position: relative;
-          
           &:hover > .visibleTree{
             opacity: 1;
             visibility: visible;
           }
           .visibleTree{
-            
             opacity: 0;
             visibility: hidden;
             position: absolute;
@@ -84,7 +81,6 @@ body{
             top: 100%;
             z-index: 2;
             background-color: $white;
-
               .firstMenu__parents{
                 width: 240px;
                   &__parent{
@@ -93,7 +89,6 @@ body{
                   visibility: visible;
                 }
                   }
-                
                 .secondMenu__children{
                   position: absolute;
                   top: 0px;
@@ -102,14 +97,11 @@ body{
                   visibility: hidden;
                   background-color: $white;
                   &__child{
-                    
-                  
                   &:hover > .thirdMenu__grandchildren{
                     opacity: 1;
                     visibility: visible;
                   }
                 }
-                    
                     .thirdMenu__grandchildren{
                       background-color: $white;
                       position: absolute;
@@ -117,7 +109,6 @@ body{
                       top: 0px;
                       opacity: 0;
                       visibility: hidden;
-                      
                       &__grandchild{
                         background-color: $white;
                       }
@@ -129,45 +120,42 @@ body{
 
               &__item{
                 position: relative;
-                
               }
-            
-            
-          
+
         }
         &--brand {
           padding-right: 30px;
           padding-left: 16px;
         }
-      }
-      &__right {
-        font-size: 14px;
-        display: block;
-        &--log-out{
-          text-decoration: none;
-          color: black;
-        }
-        &--log-out:hover{
-          text-decoration: none;
-          color:red;
-        }
-        &--log-in{
-          text-decoration: none;
-          color: black;
-        }
-        &--log-in:hover{
-          text-decoration: none;
-          color: red;
-        }
-        &--register-user {
-          padding-left: 12px;
-          text-decoration: none;
-          color: black;
-        }
-        &--register-user:hover {
-          padding-left: 12px;
-          text-decoration: none;
-          color: red;
+        &__right {
+          font-size: 14px;
+          display: block;
+          &--log-out{
+            text-decoration: none;
+            color: black;
+          }
+          &--log-out:hover{
+            text-decoration: none;
+            color:red;
+          }
+          &--log-in{
+            text-decoration: none;
+            color: black;
+          }
+          &--log-in:hover{
+            text-decoration: none;
+            color: red;
+          }
+          &--register-user {
+            padding-left: 12px;
+            text-decoration: none;
+            color: black;
+          }
+          &--register-user:hover {
+            padding-left: 12px;
+            text-decoration: none;
+            color: red;
+          }
         }
       }
     }

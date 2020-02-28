@@ -74,8 +74,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|Integer|null: false,foreign_key: true|
-|customer_id_token|String|null: false|
-|card_id_token|String|null: false|
+|customer_id|String|null: false|
+|card_id|String|null: false|
 
 ### Association
 - belongs_to :user

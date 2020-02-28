@@ -1,0 +1,124 @@
+.purchase-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  .purchase__container {
+    height: 70%;
+    width: 50%;
+    margin: 0 auto;
+    background-color: $white;
+    &__title {
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 25px;
+      font-weight: bold;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+    }
+    &__product {
+      height: 15%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      margin: 25px auto 0 auto;
+      padding-bottom: 25px;
+      &_image {
+        height: 80%;
+      }
+      &__infomation {
+        margin-left: 30px;
+        .purchase__container__product-infomation__price_right {
+          margin-right: 20px;
+        }
+      }
+    }
+    &__payment {
+      width: 80%;
+      margin: 0 auto;
+      padding: 25px 0;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      &__title {
+        font-size: 20px;
+        line-height: 44px;
+      }
+      &__price {
+        font-size: 25px;
+        line-height: 41px;
+      }
+    }
+    &__payment {
+      height: 10%;
+      width: 60%;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      &__box {
+        display: flex;
+        &__type {
+          width: 200px;
+          margin-left: 42px;
+          font-weight: bold;
+          text-align: left;
+        }
+        &__register {
+          width: 80%;
+          margin-left: 42px;
+          color: #0099e8;
+          font-size: 15px;
+        }
+      }
+    }
+    &__shipping-address {
+      height: 25%;
+      width: 60%;
+      align-items: center;
+      border-bottom: 1px rgb(235, 231, 231) solid;
+      padding: 20px 0;
+      margin: 0 auto;
+      &__box {
+        height: 100%;
+        width: 80%;
+        margin-left: 42px;
+        &__font {
+          width: 80%;
+          font-weight: bold;
+          padding-bottom: 10px;
+        }
+        &__name {
+          padding-top: 10px;
+          margin-right: 50px;
+        }
+        &__address-postal-code {
+          padding-top: 10px;
+        }
+      }
+    }
+    &__submit {
+      height: 10%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      &__btn {
+        background-color: $light_green;
+        height: 50px;
+        width: 150px;
+        outline: 0;
+        margin: 40px auto;
+        color: $white;
+        font-size: 18px;
+        &--text {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+  }
+}

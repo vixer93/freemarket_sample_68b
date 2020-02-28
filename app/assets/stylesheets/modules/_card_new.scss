@@ -1,0 +1,33 @@
+.content__title{
+  margin: 100px 0 0 30px;
+  background-color: #fff;
+  height: 450px;
+  &__name{
+    text-align: center;
+    width: 700px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 70px;
+    border-bottom: 2px solid whitesmoke;
+  }
+  &__credit-card{
+    background-color: #fff;
+    width: 350px;
+    margin: 0 auto;
+    &__inner{
+      margin-top: 20px;
+      .necessary{
+        color: #fff;
+        background: red;
+        border-radius: 3px;
+      }
+      .input-number{
+        height: 50px;
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        width: 300px;
+      }
+    }
+  }
+}

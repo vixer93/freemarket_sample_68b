@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update, :delete]
 
   def new
     @product = Product.new
@@ -15,12 +16,14 @@ class ProductsController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
   end
 
   def update
+
   end
 
   def destroy
@@ -43,5 +46,9 @@ class ProductsController < ApplicationController
               :ship_day, images_attributes: [:name])
       .merge(user_id: current_user.id, category_id: params[:product][:category_id],
              prefecture_id: params[:product][:prefecture_id], status: 0)
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
   end
 end

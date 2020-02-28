@@ -4,13 +4,13 @@
       出品した商品
     .exhibiting__second
       .exhibiting__second--left
-        = link_to("#", class: "exhibiting__second--left__btn") do
+        = link_to(exhibiting_user_url(current_user), class: "exhibiting__second--left__btn") do
           出品中
       .exhibiting__second--center
-        = link_to("#", class: "exhibiting__second--center__btn") do
+        = link_to(transaction_user_url(current_user), class: "exhibiting__second--center__btn") do
           取引中
       .exhibiting__second--right
-        = link_to("#", class: "exhibiting__second--right__btn") do
+        = link_to(sold_user_url(current_user), class: "exhibiting__second--right__btn") do
           売却済み
     .exhibiting__third
       出品中の商品がありません
@@ -19,4 +19,3 @@
         %i.left-btn.fa.fa-chevron-left
       = link_to("#", class: "right-btn") do
         %i.right-btn.fa.fa-chevron-right
-
