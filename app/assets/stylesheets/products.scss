@@ -8,7 +8,6 @@
   &__single-container{
     width: 700px;
     height: 100%;
-    //background-color: coral;
     margin: 0 auto;
   }
   &__sell-form{
@@ -62,8 +61,6 @@
     font-size: 12px;
     padding: 2px 4px;
     border-radius: 2px;
-    //vertical-align: top;
-    
   }
   &__p{
     font-size: 14px;
@@ -72,7 +69,6 @@
   }
   
   #image-box-1{
-    // display: flex;
     flex-wrap: wrap;
   }
 
@@ -83,11 +79,6 @@
     margin: 16px 0 0 0  ;
     border: 2px dotted #888888;
     word-wrap: break-all;
-    // background-image: url(camera-image3.jpeg);
-    // background-size:  25%;
-    // background-repeat: no-repeat;
-    // background-position-x:  center;
-    // background-position-y: center;
     text-align: center;
     font-size: 30px;
 
@@ -149,7 +140,6 @@
       display: none;
     }
     pre{
-      // padding-top: 30px;
       text-align: center;
       font-size: 14px;
     }
@@ -163,19 +153,16 @@
     border-top: 1px solid #eee;
     width: 100%;
     height: 440px;
-    //background-color: #fff;
   }
 
   &__form-group:first-child{
     margin: 0;
     height: 70px;
-    //background-color: green;
     margin: 40px 0 0 ;
   }
   &__form-group{
     margin: 40px 0 0;
     height: 164px;
-    //background-color: hotpink;
     input{
       height: 45px;
       border-radius: 5px;
@@ -191,14 +178,12 @@
     width: 100%;
     height: 500px;
     padding: 40px;
-    //background-color: lightseagreen;
     border-top: 1px solid #eee;
   }
   &__content-show2{
     width: 100%;
     height: 550px;
     padding: 40px;
-    //background-color: lightseagreen;
     border-top: 1px solid #eee;
   }
   
@@ -255,7 +240,6 @@
   &__settlement{
     width: 100%;
     height: 550px;
-    //background-color: tomato;
     border-top: 1px solid #c0c0c0;
     padding: 40px 40px 64px;
   }
@@ -268,16 +252,13 @@
   &__tk-selling-price{
     width: 100%;
     height: 200px;
-    //background-color: wheat;
     margin-bottom: 40px;
   }
   &__input-price{
     width: 100%;
     height: 46px;
     padding-bottom: 12px;
-    //background-color: yellow;
     display: flex;
-    //line-height: 46px;
   }
   .doll-mark{
     margin-left: auto;
@@ -285,14 +266,11 @@
   }
   &__enter-price{
     align-items: center;
-    // display: inline-flex;
     width: 50%;
     
   }
-  &__enter-price2{
-    //display: inline-block;
+  &__enter-price2{ 
     position: relative;
-    //width: inherit;
   }
   .tk-price{
     width: 100%;
@@ -303,7 +281,6 @@
   }
   &__commission{
     padding: 12px 0;
-    //background-color: pink;
     -webkit-box-align: center;
     align-items: center;
     box-sizing: content-box;
@@ -312,12 +289,10 @@
   }
   &__commission2{
     padding: 12px 0;
-    //background-color: pink;
     -webkit-box-align: center;
     align-items: center;
     box-sizing: content-box;
     height: 46px;
-    // border-bottom: 1px solid #808080;
   }
   &__commision-box{
     width: 100%;
@@ -336,14 +311,11 @@
   &__send-boxes{
     width: 50%;
     height: 100px;
-    //background-color: #fff;
     margin: 0 130px 32px 130px;
   }
   &__send-box{
     width: 100%;
     height: 50px;
-    //background-color: royalblue;
-  
   }
   .send-btn{
     width: 100%;
