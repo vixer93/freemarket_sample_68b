@@ -3,4 +3,5 @@ FactoryBot.define do
     customer_id {"aaaaaaaaaaa"}
     card_id     {"fergergergae"}
   end
+  
 end
