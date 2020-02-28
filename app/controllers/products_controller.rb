@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @image.delete
     @product.delete
-    redirect_to user_path
+    redirect_to root_path
   end
 
   def mid_category
