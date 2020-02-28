@@ -21,7 +21,6 @@
                     = i.file_field :name, value:"", style: "display:none", class: "sell-upload-drop-file"
                     %i.fa.fa-camera
         .new-listing__no-image
-          画像がありません
 
       .new-listing__sell-content
         .new-listing__form-group
@@ -80,8 +79,6 @@
       .new-listing__content-show2
         %h3.show-sub-head
           配送について
-        %a.form-question{:href => "/jp/help_center/article/68/", :target => "_blank"}
-          ?
         .new-listing__show-form-box
           .new-listing__tk-form-group
             .new-listing__sell-upload-head
@@ -115,8 +112,6 @@
       .new-listing__settlement
         %p.tk-value
           価格（¥300~9,999,999)
-          %a.form-question{:href => "/jp/help_center/article/68/", :target => "_blank"}
-            ?
         .new-listing__tk-selling-price
           .new-listing__input-price
             .new-listing__sell-upload-head2
@@ -135,15 +130,15 @@
               .new_listing__commission-font{"data-test" => "fee-label"}
                 %div
                   販売手数料（10%）
-              %span.money{"data-test" => "fee-value"}
-                —
+              %span.money01{"data-test" => "fee-value"}
+                
           .new-listing__commission2
             .new-listing__commision-box
               .new_listing__commission-font{"data-test" => "fee-label"}
                 %div
                   販売利益
-              %span.money{"data-test" => "fee-value"}
-                —
+              %span.money02{"data-test" => "fee-value"}
+                
         .new-listing__send-boxes
           .new-listing__send-box
             = f.submit "出品する", class: "send-btn"

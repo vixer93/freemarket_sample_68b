@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :update, :delete]
 
-  def index
-  end
-
   def new
     @product = Product.new
     @product.images.new

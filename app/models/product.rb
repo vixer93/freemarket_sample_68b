@@ -1,5 +1,4 @@
 class Product < ApplicationRecord
-  # has_one :contract, dependent: delete
   belongs_to :category
   belongs_to :user
   has_many :images, dependent: :destroy
@@ -18,5 +17,7 @@ class Product < ApplicationRecord
     validates :status
     validates :send_price
     validates :ship_day
+    validates :prefecture_id
+    validates :category_id
   end
 end
