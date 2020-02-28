@@ -125,7 +125,6 @@ window.addEventListener("load", function(){
   });
 
   $(function(){
-    //  カテゴリ選択
     let buildPrompt = `<option value>---</option>`
     let buildHtmlOption = function(parent) {
       let option = `<option value ="${parent.id}">${parent.name}</option>`
