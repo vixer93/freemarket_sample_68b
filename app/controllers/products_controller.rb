@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :delete]
+  before_action :set_product, only: [:show,:edit, :update, :delete]
 
   def new
     @product = Product.new
@@ -16,27 +16,17 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    if @product.update(product_params)
-      redirect_to product_path
-    else
-      render :edit
-    end
+
   end
 
   def destroy
-    @image = Image.find(params[:id])
-    @product = Product.find(params[:id])
-    @image.delete
-    @product.delete
-    redirect_to root_path
   end
 
   def mid_category
