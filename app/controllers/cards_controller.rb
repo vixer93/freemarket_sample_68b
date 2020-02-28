@@ -59,12 +59,6 @@ class CardsController < ApplicationController
     end
   end
 
-  #購入の際の参考のため残してます
-  # def pay
-  #   MyPayjp.create_charge_by_token(Card.first.customer_id,1000)
-  #   redirect_to root_path
-  # end
-
   private
 
   def set_card
