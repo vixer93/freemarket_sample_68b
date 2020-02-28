@@ -1,6 +1,6 @@
 @import "./reset";
 @import "font-awesome";
-@import "font-awesome-sprockets";
+// @import "font-awesome-sprockets";
 @import "config/colors";
 @import "modules/displayBtn";
 @import "modules/header";
@@ -12,6 +12,8 @@
 @import "modules/pickupBrand";
 @import "modules/appBanner";
 @import "modules/footer";
+@import "products";
+@import "product-show";
 @import "modules/user";
 @import "modules/myPage_side-bar";
 @import "modules/login";
@@ -22,3 +24,4 @@
 @import "modules/bought";
 @import "modules/my-page";
 @import "modules/card";
+@import "modules/parchase_confirmation";

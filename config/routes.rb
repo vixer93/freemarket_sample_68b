@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   resources :users, only: [:show]
+  resources :products, except: [:index]
+  get 'products/new/mid_category', to: 'products#mid_category'
+  get 'products/new/small_category', to: 'products#small_category'
 end
