@@ -2,7 +2,7 @@
   .signup-main__contents
     %h2.signup-main__head
       住所登録
-    = form_with model: @address, remote: true, class: "signup-main__form" do |f|
+    = form_with model: @address, local: true, class: "signup-main__form" do |f|
       .signup-main__input
         .signup-main__form-group
           = render "devise/shared/error_messages", resource: resource
@@ -56,7 +56,7 @@
           %span.signup-main__require
             必須
           %br
-          = f.text_field :block_number, placeholder: "例) 青山1-1-1", class: "signup-main__field"        
+          = f.text_field :block_number, placeholder: "例) 青山1-1-1", class: "signup-main__field"
         .add_address_block_number.add_all
 
         .signup-main__form-group
