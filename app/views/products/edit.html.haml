@@ -19,13 +19,14 @@
                 %li.adsaf
                   = image_tag image.name.url, data: { index: i }, class: "edit_img_#{i}",id: :pre_img
                   .js-remove{data: { index: i }, name: "[edit_remove][#{i}]"} 削除
+                  = f.file_field :name, name: "product[images_attributes][#{@product.images.count}][name]", class: 'js-file3', id: "img-file"
           = f.fields_for :images do |image|
             %label.js-file_group3{"data-index": "#{image.index}", id: "dropArea2"}
-              = image.file_field :src, class: 'js-file2'
+              = image.file_field :name, class: 'js-file2'
               = image.hidden_field :_destroy, data:{ index: image.index }, value: 0, class: "delete_img_#{image.index}"
           - if @product.persisted?
             .js-file_group3{"data-index": "#{@product.images.count}", style: 'display: none'}
-              = file_field_tag :src, name: "product[images_attributes][#{@product.images.count}][src]", class: 'js-file2', id: "img-file"
+              = file_field_tag :name, name: "product[images_attributes][#{@product.images.count}][name]", class: 'js-file2', id: "img-file"
           %pre.visible-pc
             :preserve
               クリックしてファイルをアップロード

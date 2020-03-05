@@ -20,14 +20,26 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @categories = Category.where(ancestry: nil)
+    @product = Product.find(params[:id])
   end
 
   def update
-
+    @categories = Category.where(ancestry: nil)
+    @product = Product.find(params[:id])
+    if @product.update(destroy_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to root_path
   end
+
 
   def mid_category
     @mid_categories = Category.where(ancestry: params[:big_category_id])
@@ -51,4 +63,9 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
+
+  def destroy_params
+    params.require(:product).permit(:product_id,:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :_destroy, :id])
+  end
+
 end

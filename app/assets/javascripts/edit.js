@@ -14,7 +14,8 @@ $(document).ready(function(){
                     <img data-index="${index}" src="${url}" class="edit_img_${index}">
                     <div data-index="${index}" class="js-remove" name="[edit_remove][${index}]">削除</div>
                   </li>
-                  <input data-index="${index}" value="0" class="delete_img_${index}" type="hidden" name="product[images_attributes][${index}][_destroy]" id="product_images_attributes_${index}__destroy">`;
+                  <input data-index="${index}" value="0" class="delete_img_${index}" type="hidden"
+                  name="product[images_attributes][${index}][_destroy]" id="product_images_attributes_${index}__destroy">`;
     return html;
   }
 
@@ -57,7 +58,7 @@ $(document).ready(function(){
     return false;
   });
 
-  
+
 
   //画像削除した時の処理//
   $('#image-box2').on('click', '.js-remove', function() {
@@ -72,7 +73,7 @@ $(document).ready(function(){
     if(file_field_btn) file_field_btn.remove(); // アップロードボタンが存在すれば削除
     //_destoryのvalue0を1に変える
     $(`.delete_img_${number}`).val('1');
-    
+
     var count = $('.adsaf').length;
     var abcde = $('#dropArea2')
     var bbcde = $('pre')
@@ -80,11 +81,37 @@ $(document).ready(function(){
       abcde.show();
       bbcde.show();
     }
-    
     // 画像入力欄が0個にならないようにしておく
     if ($('.js-file2').length == 0) $('#image-box2').append(buildFileField2(fileIndex[0]));
   });
+
+
+
+  $('#image-box2').on('change', '.js-file3', function() {
+    const getImageIndex = $(this).prev().data('index');
+    console.log(getImageIndex)
+    const buildImg2 = (getImageIndex, url)=> {
+      const html = `<li class="adsaf">
+                    <img data-index="${getImageIndex}" src="${url}" class="edit_img_${getImageIndex}">
+                    <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
+                    <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
+                  </li>
+                  <input data-index="${getImageIndex}" value="0" class="delete_img_${getImageIndex}" type="hidden"
+                  name="product[images_attributes][${getImageIndex}][_destroy]" id="product_images_attributes_${getImageIndex}__destroy">`;
+      return html;
+    }
+    $(this).parent().hide()
+    buildImg2
+    $(this).parent().remove()
+
+    $(this).buildImg2()
+    if ($('.js-file3').length == 0) $('#image-box2').append(buildFileField2(fileIndex[0]));
+  });
 });
+
+
+
+
 
 $(document).ready(function() {
   var count = $('.adsaf').length;
