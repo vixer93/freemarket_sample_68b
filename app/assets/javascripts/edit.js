@@ -87,24 +87,28 @@ $(document).ready(function(){
 
 
 
-  $('#image-box2').on('change', '.js-file3', function() {
-    const getImageIndex = $(this).prev().data('index');
+  $('#image-box2').on('change', '.js-file3', (e)=>{
+    let file = e.target.files[0]
+    let file_url = window.URL.createObjectURL(file);
+
+    
+    const getImageIndex = $('.js-file3').prev().data('index');
     console.log(getImageIndex)
+    // const getImageUrl = $('.js-file3').siblings().attr('#img-file','src')
+    // const url = getImageUrl
     const buildImg2 = (getImageIndex, url)=> {
       const html = `<li class="adsaf">
-                    <img data-index="${getImageIndex}" src="${url}" class="edit_img_${getImageIndex}">
-                    <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
+      <img data-index="${getImageIndex}" src="${file_url}" class="edit_img_${getImageIndex}">
                     <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
                   </li>
                   <input data-index="${getImageIndex}" value="0" class="delete_img_${getImageIndex}" type="hidden"
                   name="product[images_attributes][${getImageIndex}][_destroy]" id="product_images_attributes_${getImageIndex}__destroy">`;
       return html;
     }
-    var html = buildImg2(getImageIndex, url)
-    $("#previews2").append(html)
-    $(this).parent().remove()
+    var html = buildImg2(getImageIndex, file_url)
 
-    if ($('.js-file3').length == 0) $('#image-box2').append(buildFileField2(fileIndex[0]));
+    $("#previews2").append(html)
+    $('.js-file3').prev().remove()
   });
 });
 
