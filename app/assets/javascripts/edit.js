@@ -91,11 +91,7 @@ $(document).ready(function(){
     let file = e.target.files[0]
     let file_url = window.URL.createObjectURL(file);
 
-    
     const getImageIndex = $('.js-file3').prev().data('index');
-    console.log(getImageIndex)
-    // const getImageUrl = $('.js-file3').siblings().attr('#img-file','src')
-    // const url = getImageUrl
     const buildImg2 = (getImageIndex, url)=> {
       const html = `<li class="adsaf">
       <img data-index="${getImageIndex}" src="${file_url}" class="edit_img_${getImageIndex}">

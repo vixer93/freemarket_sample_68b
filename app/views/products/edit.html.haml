@@ -20,7 +20,7 @@
                   = image_tag image.name.url, data: { index: i }, class: "edit_img_#{i}",id: :pre_img
                   .js-remove{data: { index: i }, name: "[edit_remove][#{i}]"} 削除
                 = f.file_field :name, name: "product[images_attributes][#{@product.images.count}][name]", class: "js-file3", id: "img-file"
-                %input#product_images_attributes_0_id{:name => "product[images_attributes][1][id]", :type => "hidden", :value => "#{image.id}"}/
+                %input#product_images_attributes_0_id{name: "product[images_attributes][1][id]", type: "hidden", value: "#{image.id}"}/
 
 
 
@@ -95,7 +95,7 @@
         %h3.show-sub-head
           配送について
 
-        %a.form-question{:href => "/jp/help_center/article/68/", :target => "_blank"}
+        %a.form-question{href: "/jp/help_center/article/68/", target: "_blank"}
           ?
         .new-listing__show-form-box
           .new-listing__tk-form-group
@@ -130,7 +130,7 @@
       .new-listing__settlement
         %p.tk-value
           価格（¥300~9,999,999)
-          %a.form-question{:href => "/jp/help_center/article/68/", :target => "_blank"}
+          %a.form-question{href: "/jp/help_center/article/68/", target: "_blank"}
             ?
         .new-listing__tk-selling-price
           .new-listing__input-price
@@ -162,7 +162,7 @@
         .new-listing__send-boxes
           .new-listing__send-box
             = f.submit "変更する", class: "send-btn"
-            %a.return-btn{:href => "#"}
+            %a.return-btn{href: "#"}
               もどる
         %p.note
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。
