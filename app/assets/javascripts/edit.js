@@ -100,11 +100,10 @@ $(document).ready(function(){
                   name="product[images_attributes][${getImageIndex}][_destroy]" id="product_images_attributes_${getImageIndex}__destroy">`;
       return html;
     }
-    $(this).parent().hide()
-    buildImg2
+    var html = buildImg2(getImageIndex, url)
+    $("#previews2").append(html)
     $(this).parent().remove()
 
-    $(this).buildImg2()
     if ($('.js-file3').length == 0) $('#image-box2').append(buildFileField2(fileIndex[0]));
   });
 });

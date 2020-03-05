@@ -65,7 +65,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy_params
-    params.require(:product).permit(:product_id,:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :_destroy, :id])
+    params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :_destroy, :id])
   end
 
 end
