@@ -92,7 +92,7 @@ $(document).ready(function(){
     let file_url = window.URL.createObjectURL(file);
 
     const getImageIndex = $('.js-file3').prev().data('index');
-    const buildImg = (getImageIndex, url)=> {
+    const buildImg = (getImageIndex, file_url)=> {
       const html = `<li class="adsaf">
       <img data-index="${getImageIndex}" src="${file_url}" class="edit_img_${getImageIndex}">
                     <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
