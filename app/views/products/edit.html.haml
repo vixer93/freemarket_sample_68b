@@ -29,10 +29,7 @@
           - if @product.persisted?
             .js-file_group3{"data-index": "#{@product.images.count}", style: 'display: none'}
               = file_field_tag :name, name: "product[images_attributes][#{@product.images.count}][name]", class: 'js-file2', id: "img-file"
-          %pre.visible-pc
-            :preserve
-              クリックしてファイルをアップロード
-            %i.icon-camera.fas.fa-camera
+          
         #img_error
 
         .new-listing__no-image
@@ -157,6 +154,6 @@
         .new-listing__send-boxes
           .new-listing__send-box
             = f.submit "変更する", class: "send-btn"
-            = link_to product_path, "もどる", class: "return_btn"
+            = link_to  "もどる",product_path, class: "return_btn"
         %p.note
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。

@@ -120,44 +120,39 @@
   .item-image__operetion--delete:hover{
     cursor : pointer;
   }
-  .edit_img_0 {
+  @mixin add_image_size {
     height: 50px;
     width: 100px;
+  }
+  .edit_img_0 {
+    @include add_image_size
   }
   .edit_img_1 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_2 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_3 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_4 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_5 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_6 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_7 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
   }
   .edit_img_8 {
-    height: 50px;
-    width: 100px;
-  }.edit_img_9 {
-    height: 50px;
-    width: 100px;
+    @include add_image_size
+  }
+  .edit_img_9 {
+    @include add_image_size
   }
   &__sell-upload-items-container{
     width: 100%;
