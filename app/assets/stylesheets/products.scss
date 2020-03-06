@@ -120,6 +120,40 @@
   .item-image__operetion--delete:hover{
     cursor : pointer;
   }
+  @mixin add_image_size {
+    height: 50px;
+    width: 100px;
+  }
+  .edit_img_0 {
+    @include add_image_size
+  }
+  .edit_img_1 {
+    @include add_image_size
+  }
+  .edit_img_2 {
+    @include add_image_size
+  }
+  .edit_img_3 {
+    @include add_image_size
+  }
+  .edit_img_4 {
+    @include add_image_size
+  }
+  .edit_img_5 {
+    @include add_image_size
+  }
+  .edit_img_6 {
+    @include add_image_size
+  }
+  .edit_img_7 {
+    @include add_image_size
+  }
+  .edit_img_8 {
+    @include add_image_size
+  }
+  .edit_img_9 {
+    @include add_image_size
+  }
   &__sell-upload-items-container{
     width: 100%;
     height: 100%;
@@ -330,7 +364,7 @@
     display: block;
     text-align: center;
   }
-  .return-btn{
+  .return_btn{
     width: 100%;
     height: 100%;
     font-size: 17px;
@@ -360,3 +394,4 @@
 .grand_child {
   display: none;
 }
+
