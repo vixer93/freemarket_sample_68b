@@ -18,12 +18,12 @@ class ProductsController < ApplicationController
   end
 
   def show
-
+    
   end
-
+  
   def edit
   end
-
+  
   def update
     if @product.update(edit_product_params)
       redirect_to root_path
