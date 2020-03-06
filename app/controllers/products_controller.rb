@@ -10,20 +10,20 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    if @product.save
+    if params[:product][:images_attributes] && @product.save
       redirect_to root_path
     else
+      @product.images.new
       render :new
     end
   end
 
   def show
-    
   end
-  
+
   def edit
   end
-  
+
   def update
     if @product.update(edit_product_params)
       redirect_to root_path
