@@ -127,8 +127,6 @@
       .new-listing__settlement
         %p.tk-value
           価格（¥300~9,999,999)
-          %a.form-question{href: "/jp/help_center/article/68/", target: "_blank"}
-            ?
         .new-listing__tk-selling-price
           .new-listing__input-price
             .new-listing__sell-upload-head2
@@ -159,7 +157,6 @@
         .new-listing__send-boxes
           .new-listing__send-box
             = f.submit "変更する", class: "send-btn"
-            %a.return-btn{href: "#"}
-              もどる
+            = link_to product_path, "もどる", class: "return_btn"
         %p.note
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。
