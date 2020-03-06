@@ -24,7 +24,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    binding.pry
     if params[:product][:images_attributes] && @product.update(edit_product_params)
       redirect_to root_path
     else
