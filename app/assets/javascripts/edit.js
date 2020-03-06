@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // 画像用のinputを生成する関数
-  const buildFileField2 = (num)=> {
+  const buildFileField = (num)=> {
     const html = `<div data-index="${num}" class="js-file_group4">
                     <input class="js-file2" type="file"
                     name="product[images_attributes][${num}][src]"
@@ -9,7 +9,7 @@ $(document).ready(function(){
     return html;
   }
   // プレビュー用のimgタグを生成する関数
-  const buildImg2 = (index, url)=> {
+  const buildImg = (index, url)=> {
     const html = `<li class="adsaf">
                     <img data-index="${index}" src="${url}" class="edit_img_${index}">
                     <div data-index="${index}" class="js-remove" name="[edit_remove][${index}]">削除</div>
@@ -37,9 +37,9 @@ $(document).ready(function(){
     if (img2 = $(`img[data-index="${targetIndex2}"]`)[0]) {
       img2.setAttribute('src', blobUrl);
     } else {  // 新規画像追加の処理
-      $('#previews2').append(buildImg2(targetIndex2, blobUrl));
+      $('#previews2').append(buildImg(targetIndex2, blobUrl));
       // fileIndexの先頭の数字を使ってinputを作る
-      $('#image-box2').append(buildFileField2(fileIndex2[0]));
+      $('#image-box2').append(buildFileField(fileIndex2[0]));
       fileIndex2.shift();
       // 末尾の数に1足した数を追加する
       fileIndex2.push(fileIndex2[fileIndex2.length - 1] + 1);
@@ -82,7 +82,7 @@ $(document).ready(function(){
       bbcde.show();
     }
     // 画像入力欄が0個にならないようにしておく
-    if ($('.js-file2').length == 0) $('#image-box2').append(buildFileField2(fileIndex[0]));
+    if ($('.js-file2').length == 0) $('#image-box2').append(buildFileField(fileIndex[0]));
   });
 
 
@@ -92,7 +92,7 @@ $(document).ready(function(){
     let file_url = window.URL.createObjectURL(file);
 
     const getImageIndex = $('.js-file3').prev().data('index');
-    const buildImg2 = (getImageIndex, url)=> {
+    const buildImg = (getImageIndex, url)=> {
       const html = `<li class="adsaf">
       <img data-index="${getImageIndex}" src="${file_url}" class="edit_img_${getImageIndex}">
                     <div data-index="${getImageIndex}" class="js-remove" name="[edit_remove][${getImageIndex}]">削除</div>
@@ -101,7 +101,7 @@ $(document).ready(function(){
                   name="product[images_attributes][${getImageIndex}][_destroy]" id="product_images_attributes_${getImageIndex}__destroy">`;
       return html;
     }
-    var html = buildImg2(getImageIndex, file_url)
+    var html = buildImg(getImageIndex, file_url)
 
     $("#previews2").append(html)
     $('.js-file3').prev().remove()

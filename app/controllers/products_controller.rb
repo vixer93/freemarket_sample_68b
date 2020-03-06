@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :delete]
+  before_action :find_product_params, only: [:edit, :update, :destroy]
+  before_action :categories_params, only: [:edit, :update]
 
   def new
     @product = Product.new
@@ -20,14 +22,10 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @categories = Category.where(ancestry: nil)
-    @product = Product.find(params[:id])
   end
 
   def update
-    @categories = Category.where(ancestry: nil)
-    @product = Product.find(params[:id])
-    if @product.update(destroy_params)
+    if @product.update(edit_product_params)
       redirect_to root_path
     else
       render :edit
@@ -35,9 +33,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to root_path
+    if @product.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
 
@@ -57,15 +57,23 @@ class ProductsController < ApplicationController
       .permit(:name, :description, :price, :condition, :brand, :send_price,
               :ship_day, images_attributes: [:name])
       .merge(user_id: current_user.id, category_id: params[:product][:category_id],
-             prefecture_id: params[:product][:prefecture_id], status: 0)
+            prefecture_id: params[:product][:prefecture_id], status: 0)
+  end
+
+  def find_product_params
+    @product = Product.find(params[:id])
   end
 
   def set_product
     @product = Product.find(params[:id])
   end
 
-  def destroy_params
+  def edit_product_params
     params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :_destroy, :id])
+  end
+
+  def categories_params
+    @categories = Category.where(ancestry: nil)
   end
 
 end
