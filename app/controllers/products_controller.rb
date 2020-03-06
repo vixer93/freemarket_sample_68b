@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :delete]
-  before_action :find_product_params, only: [:edit, :update, :destroy]
-  before_action :categories_params, only: [:edit, :update]
+  before_action :set_product,    only: [:show, :edit, :update, :destroy]
+  before_action :set_categories, only: [:edit, :update]
 
   def new
     @product = Product.new
@@ -25,7 +24,8 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.update(edit_product_params)
+    binding.pry
+    if params[:product][:images_attributes] && @product.update(edit_product_params)
       redirect_to root_path
     else
       render :edit
@@ -60,10 +60,6 @@ class ProductsController < ApplicationController
             prefecture_id: params[:product][:prefecture_id], status: 0)
   end
 
-  def find_product_params
-    @product = Product.find(params[:id])
-  end
-
   def set_product
     @product = Product.find(params[:id])
   end
@@ -72,7 +68,7 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :price, :condition, :brand, :send_price, :ship_day, images_attributes: [:name, :_destroy, :id])
   end
 
-  def categories_params
+  def set_categories
     @categories = Category.where(ancestry: nil)
   end
 
