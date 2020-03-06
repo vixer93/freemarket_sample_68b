@@ -9,7 +9,6 @@
     %ul.othersite-login
       %li.facebook-btn
         = link_to("Facebookでログイン","https://ja-jp.facebook.com/", class: "facebook-font") 
-        = icon('fa','fa-facebook-square',class: 'facebook-icon')
       %li.google-btn
       = link_to("Googleでログイン", "https://accounts.google.com/signin/oauth/oauthchooseaccount?client_id=238694260676-l0gp5j3hs9p8l2hjmnt126q0b4iin34r.apps.googleusercontent.com&as=o8MuHM7fASy2HsHJcLhwsA&destination=https%3A%2F%2Fwww.mercari.com&approval_state=!ChRCQ0xvQmlLdVY0azg1UWpkaDNyaBIfODNVd0MtRDV6dGNlNEJxcmlYbTVkb25DQm1ubkF4Yw%E2%88%99AJDr988AAAAAXkaOkvxueuxbJJwrijL7x17eibcT-e8A&oauthgdpr=1&xsrfsig=ChkAeAh8T7myuSTrYE30z4j8zXx7FWpMvKkHEg5hcHByb3ZhbF9zdGF0ZRILZGVzdGluYXRpb24SBXNvYWN1Eg9vYXV0aHJpc2t5c2NvcGU&flowName=GeneralOAuthFlow", {class: "google-font"})
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
