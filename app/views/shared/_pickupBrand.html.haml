@@ -9,7 +9,6 @@
             %span.head__new new!
             .head__left ⇦ - - -新規投稿商品- - - ⇨ old
       .containerBrand__product--lists
-        .containerBrand__product--lists__list
         - @brandProducts.each do |product|
           = link_to product_path(product), class: "listBtn" do
             %figure.product__images
